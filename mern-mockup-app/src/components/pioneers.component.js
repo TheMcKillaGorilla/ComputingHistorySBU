@@ -363,7 +363,7 @@ function Pioneers() {
       <div className={classes.root}>
 
         <Paper className={classes.title}>
-          <h1 style={{color: 'white'}}>Pionners</h1>
+          <h1 style={{color: 'white'}}>Pioneers</h1>
         </Paper>
 
         {/* root paper for the pioneer page */}
