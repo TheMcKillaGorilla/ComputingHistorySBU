@@ -1,0 +1,35 @@
+[
+    {
+        "_id": 0,
+        "student_name": "the name of the studen",
+        "technology": "Calculator",
+        "tech_timeline": "Timeline Graphic CSE 301.png",
+        "tech_basic_summery": "Four key milestones in the history of the calculator:\r\nThe first calculators were mechanical:\r\nThe Abacus was first used in 2000 BC\r\nThe Slide Rule was invented in the 17th century by William Oughtred, and used the sum and difference of logs to divide and subtract faster (used until 1980s).\r\nWilhelm Schickard invents the first \u201cadding machine\u201d in 1623 (not popular until the 1850s).\r\nThe next ones were electronic, and used vacuum tubes\/transistors:\r\nIBM unveils the IBM 604, the first mass produced electronic calculator in 1948 (used vacuum tubes).\r\nIBM obsoletes the 604 with the IBM 608, a calculator that used transistors instead of vacuum tubes in 1957.\r\nTexas instruments released the \u201cCal Tech\u201d, a computer that can do all four arithmetic operations while being handheld in 1967.\r\nThese gave way to microchip based calculators:\r\nLarge Scale Integration semiconductor development intersects with calculators, Sharp and Rockwell develop QT-8D Micro Compet that uses integrated circuits in 1969.\r\nBusicom makes it even smaller in 1970, with the Mostek MK6010 having all four functions on a single chip.\r\nBusicom was also developing some desktop calculators with Intel, using the 4004 microprocessor in 1971. Calculators continue to become smaller.\r\nFinally, there were virtual calculators:\r\nThe IBM Simon personal communicator contains a calculator in 1993.\r\nThe first Apple Iphone was released in 2007. It and many other phones of its time had calculators.",
+        "tech_img_1": "ibm604.png",
+        "tech_img_2": "sliderule.png",
+
+        "student_tech_url": "url to student website/html doc here"
+    },
+    {
+        "_id": 1,
+        "student_name": "the name of the studen",
+        "technology": "Artificial Intelligence",
+        "tech_timeline": "Timeline_Ai.jpg",
+        "tech_basic_summery": "Artificial intelligence(AI) refers to the stimulation of human intelligence processed by machines. In simple terms, it is an effort to create machines that are capable of thinking like humans. The idea of artificial intelligence can be traced back to the ancient times. Vannevar Bush’s “As We May Think” in 1945 certainly envisioned the future where computers can perform and assist humans in activities. The first step towards the start of artificial intelligence began in 1950 when Alan Turing developed the Turing Test. Alan Turing was a highly influential pioneer in the world of computing and contributed to the beginning of AI.",
+        "tech_img_1": "https://miro.medium.com/max/4560/0*3jGv1es40NHPcTE3.jpg",
+        "tech_img_2": "https://www.washingtonpost.com/resizer/BvT9TOAXiFPpRe_WG227VWVvYFI=/arc-anglerfish-washpost-prod-washpost/public/G3HEW6RU6AI6XFUZADJRD4J5FU.jpg",
+
+        "student_tech_url": "url to student website/html doc here"
+    },
+    {
+        "_id": 2,
+        "student_name": "the name of the studen",
+        "technology": "Computer Graphics",
+        "tech_timeline": "timeline_gpu.jpg",
+        "tech_basic_summery": "When thinking of computer graphics people will commonly imagine the high definition 3D models used in todays video games or even movies that look incredibly realistic its enough to trigger the uncanny valley phenomena. Computer graphics have come a long way in such a short amount of time and its really only been about 60 years since computer graphics were being actively improved and worked on. The first \u201cgraphics\u201d started as punched cards. These were what were used to visually display information and it wasn\u2019t even displayed on the computer screen. The computer would take the punch cards and read them, loading in the information.\r\nThe way we see computer graphics now kicked off with the invention of an Oscilloscope. This is a machine that shows voltage data as waves. Ben Laposky was the one who created the connection between using an oscilloscope as computer graphics leading him to become one of the first computer artists. He saw the potential in having a visual representation of the data displayed on the screen. Ben Laposky himself said, \u201cThe relationship of the oscillons to computer art is that the basic waveforms are analogue curves, of the type used in analogue computer systems.\u201d Laposky\u2019s genius idea allowed him to set the stage for future computer graphic designers and started a chain reaction of the need to represent visual data on computers in an easy, readable way.",
+        "tech_img_1": "https://historyofinformation.com/images/Screen_Shot_2019-07-23_at_3.41.34_PM.png",
+        "tech_img_2": "https://history-computer.com/ModernComputer/Software/images/Ivan_Sutherland1962.jpg",
+
+        "student_tech_url": "CSE_301_ComputerGraphics.htm"
+    }
+]

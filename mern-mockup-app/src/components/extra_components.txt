@@ -1,0 +1,42 @@
+https://www3.cs.stonybrook.edu/~cse316/images/SBUShieldFavicon.png -> logo.svg
+read on meterial ui and meterialize 
+    https://material-ui.com/
+    https://materializecss.com/
+helpful tips 
+    https://reactjs.org/docs/components-and-props.html
+    https://www.robinwieruch.de/react-function-component
+have to use fucntional component for the container since i use class pioneer extends component
+
+questtions to ask
+- regarding the mp4 videos on the drie how do i get the embeded link?
+- how to access the png images from the drive, do i have to download them and save it to a folder in the public file?
+
+
+pioneers page with meterial-ui
+- plan to have 3 main commplex grids
+    - the (left)first grid will have a card view wich will have the pioneed video and description page
+    - the (right)seccond grid will have multiple compex grids in a nested grid, each having the playlist themed list of pioneer videos.
+    - the (bottom)third grid will be a complex frid which will have the pioneer of the day
+
+
+rule 
+- student who use video content in webpages all video conent is from yt
+- i have to find the image and specify the dimenstion
+    - we can crop the images, not scaling -> we can scale if the x and y are same scale
+        - we can also define the aspect ratio ex: 3:5
+- for the technology there should be a directory in the public file for everything which will be seperated into each different technology
+- student zip the project and submit
+- we open it and then save it into the directory without having to move stuff around
+
+
+for saving json object
+- can useState or props 
+- 
+
+debugging 
+- create breakproints in google chrome to be able to find the bug for the technology page 
+
+
+toDO:
+- create abstract for the project ~ 300 words https://www.stonybrook.edu/commcms/ureca/celebration/registration.php
+- create a pdf poster file 

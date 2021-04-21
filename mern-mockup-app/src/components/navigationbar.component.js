@@ -1,0 +1,65 @@
+
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+//import {Form, Button, FormGroup, FormControl, ControlLabel} from "react-bootstrap";
+
+
+export default class Navigationbar extends Component {
+
+  render() {
+    // const sayHello = () => console.log('Hello');
+  // const [name, setName] = useState("");
+  
+  const handleSubmit = (evt) => {
+      evt.preventDefault();
+      alert(`Submitting Name ${"name"}`)
+  }
+
+    return (
+        <nav className="navbar navbar-expand-lg" style={{
+          background: 'linear-gradient(45deg, #000000 30%, #990000 90%)'
+      }}>
+          <Link to="/" className="navbar-brand">Stony Brook University</Link>
+          <div className="collpase navbar-collapse">
+            <ul className="navbar-nav mr-auto">
+              <li className="navbar-item">
+              <Link to="/" className="nav-link">Home</Link>
+              </li>
+              <li className="navbar-item">
+              <Link to="/pioneers" className="nav-link">Pioneers</Link>
+              </li>
+              <li className="navbar-item">
+              <Link to="/technology" className="nav-link">Technology</Link>
+              </li>
+            </ul>
+              <form onSubmit={handleSubmit}>
+                <label>
+                  <input
+                    type="text"
+                    // value={name}
+                    // onChange={e => setName(e.target.value)}
+                    //  style={{
+                    //    backgroundColor: 'white',
+                    //    outerHeight: '10px'
+                    //  }}
+                  />
+                </label>
+                <input type="submit" value="Search" />
+              </form>
+          </div>
+        </nav>
+    );
+  }
+}
+
+// const Button = ({ handleClick }) => {
+//   const sayDefault = () => console.log('Default');
+ 
+//   const onClick = handleClick || sayDefault;
+ 
+//   return (
+//     <button type="button" onClick={onClick}>
+//       Login
+//     </button>
+//   );
+// };
