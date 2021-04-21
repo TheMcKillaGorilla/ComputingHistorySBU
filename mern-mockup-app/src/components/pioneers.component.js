@@ -260,7 +260,7 @@ function PioneersList() {
                 <Typography style={{color: 'white'}} variant="body2" color="textSecondary">
                   {pioneer._id}
                 </Typography>
-                <button onClick={() => PioneerInfo(pioneer)}>View</button>;
+                <button style={{background: 'linear-gradient(215deg, #000000 30%, #990000 90%)', color: 'white'}} onClick={() => PioneerInfo(pioneer)}>View</button>;
               </Grid>
             </Grid>
           </Grid>
