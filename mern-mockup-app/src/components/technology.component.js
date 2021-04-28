@@ -8,7 +8,7 @@ import styled from 'styled-components';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
-// import tech_img_sources from '/Users/ahamedarif/Desktop/Mockup_App/mern-mockup-app/src/components/tech_img_sources/'
+import SearchBar from './SearchBar'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -95,19 +95,19 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-function useTeschnologyList(){
-  const [technologies, setTechnologies] = React.useState([]);
+// function useTeschnologyList(){
+//   const [technologies, setTechnologies] = React.useState([]);
 
-  React.useEffect(() => {
-		fetch("random.json")
-			.then((response) => response.json())
-			.then((data) => {
-				setTechnologies(data) // new
-			})
-  }, [])
+//   React.useEffect(() => {
+// 		fetch("random.json")
+// 			.then((response) => response.json())
+// 			.then((data) => {
+// 				setTechnologies(data) // new
+// 			})
+//   }, [])
 
-  return technologies;
-};
+//   return technologies;
+// };
 
 function TechnologyList(technologies) {
   const classes = useStyles();
@@ -183,15 +183,39 @@ function TechnologyList(technologies) {
 
 function Technology() {
   const classes = useStyles();
-  const technologies = useTeschnologyList()
+  const [searchTech, setSearchTech] = useState([]);
+  const [input, setInput] = useState('');
+  const [technologies, setTechnologies] = React.useState([]);
+  
+  React.useEffect(() => {
+        fetch("random.json")
+            .then((response) => response.json())
+            .then((data) => {
+                setTechnologies(data) // new
+                setSearchTech(data)
+            })
+  }, [])
+
+  const updateInput = async (input) => {
+    const filtered = technologies.filter(technology => {
+     return technology.technology.toLowerCase().includes(input.toLowerCase())
+    })
+    setInput(input);
+    setSearchTech(filtered);
+ };
 
   return (
     <div className={classes.root}>
       <Paper className={classes.title}>
         <h1 style={{color:'white'}}>Technology</h1>
       </Paper>
+      <SearchBar 
+       input={input} 
+       onChange={updateInput}
+      />
       <Paper className={classes.paper}>
-        {TechnologyList(technologies)}
+        {TechnologyList(searchTech)}
+        {/* <TechList TechList={searchTech}/> */}
       </Paper>
     </div>
   )

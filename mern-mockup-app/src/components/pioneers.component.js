@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
+import SearchBar from './SearchBar';
 
 import { useState, useEffect } from 'react';
 
@@ -116,21 +117,21 @@ function useID(newid){
   return id
 }
 
-function usePioneersList(){
+// function usePioneersList(){
 
-  const [pioneers, setPioneers] = React.useState([]);
-  // const sayHello = () => console.log(pioneers[0]);
+//   const [pioneers, setPioneers] = React.useState([]);
+//   // const sayHello = () => console.log(pioneers[0]);
 
-  React.useEffect(() => {
-		fetch("sample_master.json")
-			.then((response) => response.json())
-			.then((data) => {
-				setPioneers(data) // new
-			})
-  }, []);
+//   React.useEffect(() => {
+// 		fetch("sample_master.json")
+// 			.then((response) => response.json())
+// 			.then((data) => {
+// 				setPioneers(data) // new
+// 			})
+//   }, []);
 
-  return pioneers;
-}
+//   return pioneers;
+// };
 
 function PioneersList(pioneers) {
   const classes = useStyles();
@@ -175,12 +176,6 @@ function PioneersList(pioneers) {
     </div>
   )));
 }
-
-// the problem that i discovered was that i cannot call the specific pioneer 
-// in the array because the array does not exist when it is first rendered.
-// because it is not existing on the first render, i get an undifined when i try to call any pioneer
-// how should i get it to appear on the first render and why does it work for .map function but not when i call a 
-// specific pioneer
 
 function PioneerInfo(pioneers) {
   const classes = useStyles();
@@ -275,11 +270,27 @@ function PioneerOfTheDay(pioneers) {
 
 function Pioneers() {
   const classes = useStyles();
-  const pioneers = usePioneersList();
-  const [id, setID] = useState(1);
-  // console.log(pioneers[1])
-  // console.log(id)
-  // console.log("hello")
+  // const pioneers = usePioneersList();
+  const [pioneers, setPioneers] = React.useState([]);
+  const [searchPioneers, setSearchPioneers] = useState([]);
+  const [input, setInput] = useState('');
+
+  React.useEffect(() => {
+		fetch("sample_master.json")
+			.then((response) => response.json())
+			.then((data) => {
+        setPioneers(data) // new
+        setSearchPioneers(data)
+			})
+  }, []);
+
+  const updateInput = async (input) => {
+    const filtered = pioneers.filter(pioneer => {
+     return pioneer.pioneername.toLowerCase().includes(input.toLowerCase())
+    })
+    setInput(input);
+    setSearchPioneers(filtered);
+ };
 
   return (
       <div className={classes.root}>
@@ -288,6 +299,8 @@ function Pioneers() {
           <h1 style={{color: 'white'}}>Pioneers</h1>
         </Paper>
 
+        <SearchBar input={input} onChange={updateInput}/>
+
         {/* root paper for the pioneer page */}
         <Paper className={classes.backgroundPaper}> 
         
@@ -295,7 +308,7 @@ function Pioneers() {
              
             {/* paper for the playlist of all the pioneers */}
             <Paper className={classes.videopaper}>
-              <Grid item >{PioneersList(pioneers)}</Grid>
+              <Grid item >{PioneersList(searchPioneers)}</Grid>
             </Paper>
 
             {/* paper for the pioneer full information */}

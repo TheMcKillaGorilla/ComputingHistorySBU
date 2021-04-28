@@ -9,11 +9,6 @@ export default class Navigationbar extends Component {
   render() {
     // const sayHello = () => console.log('Hello');
   // const [name, setName] = useState("");
-  
-  const handleSubmit = (evt) => {
-      evt.preventDefault();
-      alert(`Submitting Name ${"name"}`)
-  }
 
     return (
         <nav className="navbar navbar-expand-lg" style={{
@@ -32,20 +27,6 @@ export default class Navigationbar extends Component {
               <Link to="/technology" className="nav-link">Technology</Link>
               </li>
             </ul>
-              <form onSubmit={handleSubmit}>
-                <label>
-                  <input
-                    type="text"
-                    // value={name}
-                    // onChange={e => setName(e.target.value)}
-                    //  style={{
-                    //    backgroundColor: 'white',
-                    //    outerHeight: '10px'
-                    //  }}
-                  />
-                </label>
-                <input type="submit" value="Search" />
-              </form>
           </div>
         </nav>
     );
