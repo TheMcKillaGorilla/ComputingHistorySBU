@@ -16,7 +16,7 @@ const useStyles = makeStyles({
     flexGrow: 1,
     // Width: '300px',
     // Height: '200px',
-    background: 'linear-gradient(45deg, #000000 30%, #990000 90%)'
+    background: 'linear-gradient(180deg, #000000 30%, #990000 90%)'
   },
   img: {
     maxWidth: 400,
@@ -101,7 +101,9 @@ function TechTabs() {
   };
 
   const tech = useTechList();
-  console.log(tech[0])
+  const tech1 = tech[0]
+  // set break point to see what happnes in here
+  console.log(tech1["technology"])
   
   return (
     <Paper square className={classes.root}>

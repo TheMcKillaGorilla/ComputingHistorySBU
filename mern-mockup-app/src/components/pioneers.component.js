@@ -104,45 +104,17 @@ function SavePioneer(pioneerID) {
 
 }
 
-// const handleClick = value => () => PioneerInfo(value)
-// function PioneerInfo(value) {
+var pioneerID = 0;
 
-//   const [id, setID] = useState(0);
-//   setID(value);
+function useID(newid){
+  const [id, setID] = useState(0);
 
-//   const classes = useStyles();
-//   const pioneers = usePioneersList();
-//   const pioneer = pioneers[value];
+  useEffect(() => {
+    setID(newid)
+  })
 
-//   return (
-//     <div className={classes.root}>
-//       <Typography gutterBottom variant="subtitle1">
-//         <h4>{pioneer.pioneername} </h4>
-//       </Typography>
-//       <Grid container spacing={2}>
-        
-//         <Paper className={classes.pioneerinfobody}>
-//           <Typography variant="body2" gutterBottom>
-//             Born on August 26, 1892 in Indiana Attended University of Ohio briefly before she moved to Hillstock College to be closer to home and her sick father Graduated with a English liturature degree Met Mary Robert Friedman who introduced her to the world of cryptography. Worked on decrypting cyphers for 4 years together before she quit to work for the war department in washington DC Passion of language helped her decrypt cryptography in Chinese and Mandorin
-//           </Typography>
-//         </Paper>
-//         <Grid item>
-//           <Paper className={classes.pioneerinfovideo}>
-//             <iframe width="500" height="300" alt="complex" src="https://www.youtube.com/embed/12BK4THxLIU" />
-//           </Paper>
-//         </Grid>
-//         <Grid item>
-//             <ButtonBase className={classes.pioneerifoimages}>
-//               <img className={classes.img} alt="complex" src="https://i.pinimg.com/originals/f0/ab/2e/f0ab2ece8fa15937f0d1cbd3c882203d.jpg" />
-//               <img className={classes.img} alt="complex" src="http://cdn.coverstand.com/24294/595236/article_assets/dad9fb03df9ab821703a9603d3cfef91fea34ec7.jpg" />
-//               <img className={classes.img} alt="complex" src="https://i1.wp.com/www.brainpickings.org/wp-content/uploads/2018/09/elizebethfriedman1.jpg" />
-//             </ButtonBase>
-//         </Grid>
-//       </Grid>
-//     </div>
-//   )
-// }
-
+  return id
+}
 
 function usePioneersList(){
 
@@ -160,82 +132,16 @@ function usePioneersList(){
   return pioneers;
 }
 
-// function PioneersList() {
-//   const classes = useStyles();
-  
-//   const pioneers = usePioneersList();
-
-//   function PioneerInfo(pioneerObject) {
-  
-//     return (
-      
-//       <div className={classes.root}>
-//         <Paper className={classes.pioneerfullinfo}>
-//           <Typography gutterBottom variant="subtitle1">
-//             <h4>{console.log(pioneerObject)} </h4>
-//           </Typography>
-//           <Grid container spacing={2}>
-          
-//           <Paper className={classes.pioneerinfobody}>
-//             <Typography variant="body2" gutterBottom>
-//               Born on August 26, 1892 in Indiana Attended University of Ohio briefly before she moved to Hillstock College to be closer to home and her sick father Graduated with a English liturature degree Met Mary Robert Friedman who introduced her to the world of cryptography. Worked on decrypting cyphers for 4 years together before she quit to work for the war department in washington DC Passion of language helped her decrypt cryptography in Chinese and Mandorin
-//             </Typography>
-//           </Paper>
-//           <Grid item>
-//             <Paper className={classes.pioneerinfovideo}>
-//               <iframe width="500" height="300" alt="complex" src="https://www.youtube.com/embed/12BK4THxLIU" />
-//             </Paper>
-//           </Grid>
-//           <Grid item>
-//               <ButtonBase className={classes.pioneerifoimages}>
-//                 <img className={classes.img} alt="complex" src="https://i.pinimg.com/originals/f0/ab/2e/f0ab2ece8fa15937f0d1cbd3c882203d.jpg" />
-//                 <img className={classes.img} alt="complex" src="http://cdn.coverstand.com/24294/595236/article_assets/dad9fb03df9ab821703a9603d3cfef91fea34ec7.jpg" />
-//                 <img className={classes.img} alt="complex" src="https://i1.wp.com/www.brainpickings.org/wp-content/uploads/2018/09/elizebethfriedman1.jpg" />
-//               </ButtonBase>
-//           </Grid>
-//         </Grid>
-//         </Paper>
-//       </div>
-    
-//     )
-//   }
-
-//   return pioneers.map((pioneer) => ((
-//     <div className={classes.root}>
-
-//       <Paper className={classes.paper}>
-//         <Grid container spacing={2}>
-//           <Grid item>
-//             <ButtonBase className={classes.image}>
-//               <iframe  className={classes.img} alt="complex" src={ pioneer.url } />
-//             </ButtonBase>
-//           </Grid>
-//           <Grid item xs={12} sm container>
-//             <Grid item xs container direction="column" spacing={2}>
-//               <Grid item xs>
-//                 <Typography gutterBottom variant="subtitle1">
-//                   <h4>{pioneer.pioneername}</h4>
-//                 </Typography>
-//                 <Typography variant="body2" gutterBottom>
-//                   {pioneer.student_name}
-//                 </Typography>
-//                 <Typography variant="body2" color="textSecondary">
-//                   {pioneer._id}
-//                 </Typography>
-//                 <button onClick={() => PioneerInfo(pioneer)}>View</button>;
-//               </Grid>
-//             </Grid>
-//           </Grid>
-//         </Grid>
-//       </Paper>
-//     </div>
-//   )));
-// }
-
-function PioneersList() {
+function PioneersList(pioneers) {
   const classes = useStyles();
-  
-  const pioneers = usePioneersList();
+  // const pioneers = usePioneersList();
+  const [id, setID] = useState(0);
+
+  useEffect(() => {
+    pioneerID = id;
+    // console.log(pioneerID)
+  });
+
 
   return pioneers.map((pioneer) => ((
     <div className={classes.root}>
@@ -260,7 +166,7 @@ function PioneersList() {
                 <Typography style={{color: 'white'}} variant="body2" color="textSecondary">
                   {pioneer._id}
                 </Typography>
-                <button style={{background: 'linear-gradient(215deg, #000000 30%, #990000 90%)', color: 'white'}} onClick={() => PioneerInfo(pioneer)}>View</button>;
+                <button style={{background: 'linear-gradient(215deg, #000000 30%, #990000 90%)', color: 'white'}} onClick={() => setID(pioneer["_id"])}>View</button>;
               </Grid>
             </Grid>
           </Grid>
@@ -270,11 +176,24 @@ function PioneersList() {
   )));
 }
 
-function PioneerInfo(pioneerObject) {
-  const classes = useStyles();
-  const pioneers = usePioneersList();
-  const [pioneer, updatePioneer] = useState(pioneers[1])
+// the problem that i discovered was that i cannot call the specific pioneer 
+// in the array because the array does not exist when it is first rendered.
+// because it is not existing on the first render, i get an undifined when i try to call any pioneer
+// how should i get it to appear on the first render and why does it work for .map function but not when i call a 
+// specific pioneer
 
+function PioneerInfo(pioneers) {
+  const classes = useStyles();
+  // const pioneers = usePioneersList();
+  const [id, setID] = useState(0);
+
+  useEffect(() => {
+    setID(pioneerID)
+  })
+
+  let newpioneer = pioneers[id] ?? 0
+  console.log(newpioneer)
+  
   
 
   return (
@@ -283,25 +202,25 @@ function PioneerInfo(pioneerObject) {
       {/* <Paper className={classes.pioneerfullinfo}> */}
         <Typography gutterBottom variant="subtitle1">
           {/* <h4>{console.log(pioneerObject)} </h4> */}
-          <h4 style={{color: 'white'}}> Elizebeth Friedman </h4>
+          <h4 style={{color: 'white'}}> {newpioneer["pioneername"]} </h4>
           <br/>
         </Typography>
         <Grid container spacing={2}>        
           <Paper className={classes.pioneerinfobody}>
             <Typography style={{color:'white'}} variant="body2" gutterBottom>
-              Born on August 26, 1892 in Indiana Attended University of Ohio briefly before she moved to Hillstock College to be closer to home and her sick father Graduated with a English liturature degree Met Mary Robert Friedman who introduced her to the world of cryptography. Worked on decrypting cyphers for 4 years together before she quit to work for the war department in washington DC Passion of language helped her decrypt cryptography in Chinese and Mandorin
+              {newpioneer["description_one"]}
             </Typography>
           </Paper>
           <Grid item>
             <Paper className={classes.pioneerinfovideo}>
-              <iframe style={{backgroundColor: 'black'}} width="500" height="300" alt="complex" src="https://www.youtube.com/embed/12BK4THxLIU" />
+              <iframe style={{backgroundColor: 'black'}} width="500" height="300" alt="complex" src={newpioneer["url"]} />
             </Paper>
           </Grid>
           <Grid item>
               <ButtonBase className={classes.pioneerifoimages}>
-                <img className={classes.img} alt="complex" src="https://i.pinimg.com/originals/f0/ab/2e/f0ab2ece8fa15937f0d1cbd3c882203d.jpg" />
-                <img className={classes.img} alt="complex" src="http://cdn.coverstand.com/24294/595236/article_assets/dad9fb03df9ab821703a9603d3cfef91fea34ec7.jpg" />
-                <img className={classes.img} alt="complex" src="https://i1.wp.com/www.brainpickings.org/wp-content/uploads/2018/09/elizebethfriedman1.jpg" />
+                <img className={classes.img} alt="complex" src={newpioneer["img_1"]} />
+                <img className={classes.img} alt="complex" src={newpioneer["img_2"]} />
+                <img className={classes.img} alt="complex" src={newpioneer["img_3"]} />
               </ButtonBase>
           </Grid>
         </Grid>
@@ -312,14 +231,14 @@ function PioneerInfo(pioneerObject) {
 }
 
 
-function PioneerOfTheDay() {
+function PioneerOfTheDay(pioneers) {
   const classes = useStyles();
-  const pioneers = usePioneersList();
-  const randomKey = Math.floor(Math.random() * 2);
+  // const pioneers = usePioneersList();
+  const randomKey = Math.floor(Math.random() * 3);
 
-  const pioneer = pioneers[randomKey];
+  const pioneer = pioneers[randomKey] ?? 0
 
-  const sayHello = () => console.log(pioneer);
+  // const sayHello = () => console.log(pioneer);
 
 
   return (
@@ -331,26 +250,24 @@ function PioneerOfTheDay() {
         
         <Paper className={classes.pioneerofdaydescription}>
           <Typography style={{color: 'white'}} variant="body2" gutterBottom>
-            Born on August 26, 1892 in Indiana Attended University of Ohio briefly before she moved to Hillstock College to be closer to home and her sick father Graduated with a English liturature degree Met Mary Robert Friedman who introduced her to the world of cryptography. Worked on decrypting cyphers for 4 years together before she quit to work for the war department in washington DC Passion of language helped her decrypt cryptography in Chinese and Mandorin
-            {/* {pioneer.pioneername} */}
+            {pioneer["description_two"]}
           </Typography>
         </Paper>
         <Grid item>
             <ButtonBase className={classes.pioneerofthedayimg}>
-              <img className={classes.img} alt="complex" src="https://i.pinimg.com/originals/f0/ab/2e/f0ab2ece8fa15937f0d1cbd3c882203d.jpg" />
+              <img className={classes.img} alt="complex" src={pioneer["img_1"]} />
             </ButtonBase>
         </Grid>
         <Grid item>
             <ButtonBase className={classes.pioneerofthedayimg}>
-              <img className={classes.img} alt="complex" src="http://cdn.coverstand.com/24294/595236/article_assets/dad9fb03df9ab821703a9603d3cfef91fea34ec7.jpg" />
+              <img className={classes.img} alt="complex" src={pioneer["img_2"]} />
             </ButtonBase>
         </Grid>
         <Grid item>
             <ButtonBase className={classes.pioneerofthedayimg}>
-              <img className={classes.img} alt="complex" src="https://i1.wp.com/www.brainpickings.org/wp-content/uploads/2018/09/elizebethfriedman1.jpg" />
+              <img className={classes.img} alt="complex" src={pioneer["img_3"]} />
             </ButtonBase>
         </Grid>
-        <button onClick={sayHello} />
       </Grid>
     </div>
   )
@@ -358,6 +275,11 @@ function PioneerOfTheDay() {
 
 function Pioneers() {
   const classes = useStyles();
+  const pioneers = usePioneersList();
+  const [id, setID] = useState(1);
+  // console.log(pioneers[1])
+  // console.log(id)
+  // console.log("hello")
 
   return (
       <div className={classes.root}>
@@ -370,106 +292,28 @@ function Pioneers() {
         <Paper className={classes.backgroundPaper}> 
         
           <Grid container spacing={3}>
-            
-            {/* paper for the pioneer full information */}
-            <Paper  className={classes.pioneerfullinfo}>
-              {PioneerInfo()}
-              {/* {PioneersList().PioneerInfo()} */}
-            </Paper>
-            
              
             {/* paper for the playlist of all the pioneers */}
             <Paper className={classes.videopaper}>
-              <Grid item >{PioneersList()}</Grid>
+              <Grid item >{PioneersList(pioneers)}</Grid>
+            </Paper>
+
+            {/* paper for the pioneer full information */}
+            <Paper  className={classes.pioneerfullinfo}>
+              {PioneerInfo(pioneers)}
+              {/* {PioneersList().PioneerInfo()} */}
             </Paper>
 
             {/* paper for the pioneer of the day page */}
             <Grid item xs={12}>
               <Paper className={classes.pioneerofthedaypaper}>
-                {PioneerOfTheDay()}
+                {PioneerOfTheDay(pioneers)}
               </Paper>
             </Grid>
           </Grid>
         </Paper>
       </div>
   )
-}
-
-class nia extends Component {
-  
-  // constructor(props) {
-  //   super(props);
-
-  //   this.state = {
-  //     pioneers: []
-  //   };
-  // }
-
-  // componentDidMount() {
-  //   // https://learn-co-curriculum.github.io/books-json-example-api/books.json
-  //   fetch('sample_master.json')
-  //     .then(response => response.json())
-  //     .then(pioneerData => this.setState({ pioneers: pioneerData.pioneers }))
-  // }
-
-  // renderPioneers = () => {
-  //   return this.state.pioneers.map(pioneer => {
-  //     return (
-  //       <>
-  //       {/* <div class="card">
-  //         <h2>{ pioneer.pioneername }</h2>
-  //         <div className="video-container">
-  //           <iframe width="853" height="480" src={ pioneer.url } allowfullscreen></iframe>
-  //         </div>
-  //           <br/>
-  //         <p>{ pioneer.description_one }</p>
-  //           <br/>
-//           <img width="200" height="200" src={ pioneer.img_1 } />
-//           <img width="200" height="200" src={ pioneer.img_2 } />
-//           <img width="200" height="200" src={ pioneer.img_3 } />
-//             <br/>
-//           <p>{ pioneer.student_name }</p>
-//             <br/>
-//         </div> */}
-//           <div class="row">
-//             <div class="col s12 m6">
-//               <div class="card">
-//                 <div class="card-image">
-//                 </div>
-//                 <div class="card-content">
-//                   <div className="video-container">
-//                     <iframe src={ pioneer.url } allowfullscreen></iframe>
-//                   </div>
-//                   <br/>
-//                   <h3>{ pioneer.pioneername }</h3>
-//                   <h5> By: {pioneer.student_name }</h5>
-//                   <p>{ pioneer.description_one }</p>
-//                   <br/>
-//                   <img width="300" height="300" src={ pioneer.img_1 } />
-//                   <img width="300" height="300" src={ pioneer.img_2 } />
-//                   <img width="300" height="300" src={ pioneer.img_3 } />
-
-//                 </div>
-//               </div>    
-//             </div>
-//           </div>
-//         </>
-//       )
-//     })
-//   }
-
-  // render() {
-  //   return (
-  //     <>
-  //       <h1>Welcome to the Pionners Page</h1>
-  //       <br/>
-  //       <div className="book-list">
-  //         { this.renderPioneers() }
-  //       </div>
-  //     </>
-  //   )
-  // }
-
 }
 
 export default Pioneers;
