@@ -103,7 +103,7 @@ function TechTabs() {
   const tech = useTechList();
   const tech1 = tech[0]
   // set break point to see what happnes in here
-  console.log(tech1["technology"])
+  
   
   return (
     <Paper square className={classes.root}>
