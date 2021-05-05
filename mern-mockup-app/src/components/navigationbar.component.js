@@ -1,14 +1,11 @@
 
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-//import {Form, Button, FormGroup, FormControl, ControlLabel} from "react-bootstrap";
 
 
 export default class Navigationbar extends Component {
 
   render() {
-    // const sayHello = () => console.log('Hello');
-  // const [name, setName] = useState("");
 
     return (
         <nav className="navbar navbar-expand-lg" style={{
@@ -32,15 +29,3 @@ export default class Navigationbar extends Component {
     );
   }
 }
-
-// const Button = ({ handleClick }) => {
-//   const sayDefault = () => console.log('Default');
- 
-//   const onClick = handleClick || sayDefault;
- 
-//   return (
-//     <button type="button" onClick={onClick}>
-//       Login
-//     </button>
-//   );
-// };

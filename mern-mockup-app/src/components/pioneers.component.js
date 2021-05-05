@@ -6,24 +6,23 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import SearchBar from './SearchBar';
+import "../pioneer.css"
 
 import { useState, useEffect } from 'react';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    width: '100%'
   },
   paper: {
     padding: theme.spacing(0),
     margin: 'auto',
-    // background: 'linear-gradient(45deg, #000000 30%, #990000 90%)',
-    // backgroundColor: "#000000",
-    // backgroundColor: "#BEBEBE",
   },
   pioneerCardPaper: {
     padding: theme.spacing(0),
     margin: 'auto',
-    background: 'linear-gradient(215deg, #000000 30%, #990000 90%)',
+    background: 'transparent',
   },
   backgroundPaper: {
     padding: theme.spacing(0),
@@ -31,18 +30,18 @@ const useStyles = makeStyles((theme) => ({
     background: '#000000',
   },
   title: {
-    padding: theme.spacing(0),
     textAlign: 'center',
-    background: 'linear-gradient(215deg, #000000 30%, #990000 90%)',
+    background: 'linear-gradient(to top left,  #D52027 50%, #68000D 50%)'
   },
   videopaper: {
     padding: theme.spacing(2),
     margin: 'auto',
     maxHeight: 500,
     maxWidth: '32%',
-    background: 'linear-gradient(45deg, #000000 30%, #990000 90%)',
+    background: 'linear-gradient(180deg, #D44949 20%, #000000 70%)',
     overflow: 'hidden',
     overflowY: 'scroll',
+    borderRadius: 56
   },
   pioneerfullinfo: {
     padding: theme.spacing(2),
@@ -52,7 +51,8 @@ const useStyles = makeStyles((theme) => ({
     overflow: 'hidden',
     overflowY: 'scroll',
     overflowX: 'scroll',
-    background: 'linear-gradient(45deg, #000000 30%, #990000 90%)'
+    background: 'linear-gradient(180deg, #DD5353 20%, #000000 70%)',
+    borderRadius: 56
   },
   pioneerinfobody: {
     maxHeight: 500,
@@ -60,12 +60,12 @@ const useStyles = makeStyles((theme) => ({
     margin: '10px',
     overflow: 'hidden',
     overflowY: 'scroll',
-    backgroundColor: "#000000",
+    backgroundColor: "transparent",
   },
   pioneerinfovideo: {
     maxHeight: '100%',
     maxWidth: '100%',
-    background: 'linear-gradient(45deg, #000000 30%, #990000 90%)'
+    background: 'linear-gradient(45deg, #000000 20%, #990000 70%)'
   },
   pioneerifoimages: {
     width: 900,
@@ -87,7 +87,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 200,
     overflow: 'hidden',
     overflowY: 'scroll',
-    backgroundColor: '#000000'
+    backgroundColor: 'transparent'
   },
   pioneerofthedayimg: {
     width: 200,
@@ -95,52 +95,34 @@ const useStyles = makeStyles((theme) => ({
   },
   pioneerofthedaypaper: {
     maxHeight: '100%',
-    background: 'linear-gradient(45deg, #000000 30%, #990000 90%)',
+    background: 'linear-gradient(180deg, #D63C3C 20%, #000000 70%)',
+    borderRadius: 56
   },
 }));
 
-function SavePioneer(pioneerID) {
-  const [prevState, setState] = React.useState([]);
-  // setState(prevState => [...prevState, pioneer] )
-
-}
-
 var pioneerID = 0;
 
-function useID(newid){
-  const [id, setID] = useState(0);
+function usePioneersList(){
 
-  useEffect(() => {
-    setID(newid)
-  })
+  const [pio, setPio] = React.useState([]);
 
-  return id
-}
+  React.useEffect(() => {
+		fetch("sample_master.json")
+			.then((response) => response.json())
+			.then((data) => {
+				setPio(data) 
+			})
+  }, []);
 
-// function usePioneersList(){
-
-//   const [pioneers, setPioneers] = React.useState([]);
-//   // const sayHello = () => console.log(pioneers[0]);
-
-//   React.useEffect(() => {
-// 		fetch("sample_master.json")
-// 			.then((response) => response.json())
-// 			.then((data) => {
-// 				setPioneers(data) // new
-// 			})
-//   }, []);
-
-//   return pioneers;
-// };
+  return pio;
+};
 
 function PioneersList(pioneers) {
   const classes = useStyles();
-  // const pioneers = usePioneersList();
   const [id, setID] = useState(0);
 
   useEffect(() => {
     pioneerID = id;
-    // console.log(pioneerID)
   });
 
 
@@ -173,13 +155,13 @@ function PioneersList(pioneers) {
           </Grid>
         </Grid>
       </Paper>
+      <br/>
     </div>
   )));
 }
 
 function PioneerInfo(pioneers) {
   const classes = useStyles();
-  // const pioneers = usePioneersList();
   const [id, setID] = useState(0);
 
   useEffect(() => {
@@ -193,10 +175,8 @@ function PioneerInfo(pioneers) {
 
   return (
     
-    <div className={classes.root}>
-      {/* <Paper className={classes.pioneerfullinfo}> */}
+    <div className="pioneer">
         <Typography gutterBottom variant="subtitle1">
-          {/* <h4>{console.log(pioneerObject)} </h4> */}
           <h4 style={{color: 'white'}}> {newpioneer["pioneername"]} </h4>
           <br/>
         </Typography>
@@ -219,22 +199,19 @@ function PioneerInfo(pioneers) {
               </ButtonBase>
           </Grid>
         </Grid>
-      {/* </Paper> */}
     </div>
   
   )
 }
 
 
-function PioneerOfTheDay(pioneers) {
+function PioneerOfTheDay() {
   const classes = useStyles();
-  // const pioneers = usePioneersList();
+  const pioneers = usePioneersList();
+
   const randomKey = Math.floor(Math.random() * 3);
 
   const pioneer = pioneers[randomKey] ?? 0
-
-  // const sayHello = () => console.log(pioneer);
-
 
   return (
     <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}} className={classes.root}>
@@ -270,7 +247,6 @@ function PioneerOfTheDay(pioneers) {
 
 function Pioneers() {
   const classes = useStyles();
-  // const pioneers = usePioneersList();
   const [pioneers, setPioneers] = React.useState([]);
   const [searchPioneers, setSearchPioneers] = useState([]);
   const [input, setInput] = useState('');
@@ -279,7 +255,7 @@ function Pioneers() {
 		fetch("sample_master.json")
 			.then((response) => response.json())
 			.then((data) => {
-        setPioneers(data) // new
+        setPioneers(data) 
         setSearchPioneers(data)
 			})
   }, []);
@@ -320,7 +296,7 @@ function Pioneers() {
             {/* paper for the pioneer of the day page */}
             <Grid item xs={12}>
               <Paper className={classes.pioneerofthedaypaper}>
-                {PioneerOfTheDay(pioneers)}
+                {PioneerOfTheDay()}
               </Paper>
             </Grid>
           </Grid>

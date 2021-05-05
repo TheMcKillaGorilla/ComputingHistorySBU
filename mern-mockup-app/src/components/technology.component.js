@@ -18,24 +18,25 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(0),
     margin: 'auto',
-    background: 'linear-gradient(45deg, #000000 30%, #990000 90%)'
-    // maxWidth: '100%',
-    // maxHeight: '100%',
-    // overflow: 'hidden',
-    // overflowY: 'scroll',
-    // backgroundColor: "#BEBEBE",
+    background: 'linear-gradient(180deg, #DC4141 30%, #000000 90%)',
+    borderRadius: 56,
+    overflow: 'hidden',
+    overflowY: 'scroll',
   },
   title: {
     padding: theme.spacing(0),
     textAlign: 'center',
-    // backgroundColor: "#990000",
-    background: 'linear-gradient(215deg, #000000 30%, #990000 90%)',
+    background: 'linear-gradient(to top left,  #D52027 50%, #68000D 50%)'
+    },
+  techCardPaper: {
+    padding: theme.spacing(0),
+    margin: 'auto',
+    background: 'transparent',
   },
   tech_title: {
     padding: theme.spacing(0),
     textAlign: 'center',
-    // backgroundColor: "#990000",
-    background: 'linear-gradient(45deg, #000000 30%, #990000 90%)',
+    background: 'linear-gradient(to top left,  #D52027 50%, #68000D 50%)'
   },
   image: {
     width: 500,
@@ -51,7 +52,6 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    // background: 'linear-gradient(45deg, #000000 30%, #990000 90%)'
   },
   modalpaper: {
     background: 'linear-gradient(45deg, #000000 30%, #990000 90%)',
@@ -80,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
     width: 600,
     overflow: 'hidden',
     overflowY: 'scroll',
-    backgroundColor: '#000000'
+    backgroundColor: 'transparent'
   },
 }));
 
@@ -94,20 +94,6 @@ const Button = styled.button`
   font-size: 24px;
   cursor: pointer;
 `;
-
-// function useTeschnologyList(){
-//   const [technologies, setTechnologies] = React.useState([]);
-
-//   React.useEffect(() => {
-// 		fetch("random.json")
-// 			.then((response) => response.json())
-// 			.then((data) => {
-// 				setTechnologies(data) // new
-// 			})
-//   }, [])
-
-//   return technologies;
-// };
 
 function TechnologyList(technologies) {
   const classes = useStyles();
@@ -146,13 +132,12 @@ function TechnologyList(technologies) {
 
   return technologies.map((technology) => ((
     <div className={classes.root}>
-      <Paper className={classes.paper}>
+      <Paper className={classes.techCardPaper}>
         <div class="row">
           <div class="col s12 m6">
-            <div class="card">
+            <div class="card" style={{borderRadius: 56}}>
               <div class="card-image">
                 <img src={ technology.tech_timeline } />
-                  {/* <div> */}
                     <button class="btn-floating halfway-fab waves-effect waves-light red" onClick={handleOpen(technology)} ><i class="material-icons">add</i></button>
                     <Modal
                       aria-labelledby="transition-modal-title"
@@ -168,15 +153,15 @@ function TechnologyList(technologies) {
                     >
                       {body}
                     </Modal>
-                  {/* </div> */}
               </div>
-              <div style={{background: 'linear-gradient(180deg, #000000 30%, #990000 90%)'}} class="card-content">
+              <div style={{background: 'linear-gradient(180deg, #DC4141 30%, #000000 90%)'}} class="card-content">
                 <h2 style={{color: 'white'}} class="card-title">{ technology.technology }</h2>
               </div>
             </div>
           </div>
         </div>
       </Paper>
+      <br/>
     </div>
   )));
 }
@@ -191,7 +176,7 @@ function Technology() {
         fetch("random.json")
             .then((response) => response.json())
             .then((data) => {
-                setTechnologies(data) // new
+                setTechnologies(data)
                 setSearchTech(data)
             })
   }, [])
@@ -215,7 +200,6 @@ function Technology() {
       />
       <Paper className={classes.paper}>
         {TechnologyList(searchTech)}
-        {/* <TechList TechList={searchTech}/> */}
       </Paper>
     </div>
   )

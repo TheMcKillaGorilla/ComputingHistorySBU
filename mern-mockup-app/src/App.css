@@ -37,21 +37,3 @@
   }
 }
 
-.menu-item {
-  padding: 0 40px;
-  margin: 5px 10px;
-  user-select: none;
-  cursor: pointer;
-  border: 2px rgba(221, 45, 13, 0.836) solid;
-}
-.menu-item-wrapper.active {
-  border: 1px blue solid;
-}
-.menu-item.active {
-  border: 1px green solid;
-}
-
-.scroll-menu-arrow {
-  padding: 20px;
-  cursor: pointer;
-}
