@@ -4,12 +4,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import PhoneIcon from '@material-ui/icons/Phone';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import PersonPinIcon from '@material-ui/icons/PersonPin';
-import image1 from '../tech_img_sources/Timeline Graphic CSE 301.png';
-import image2 from '../tech_img_sources/Timeline_Ai.jpg';
-import image3 from '../tech_img_sources/timeline_gpu.jpg';
+
+
 
 const useStyles = makeStyles({
   root: {
@@ -36,20 +32,6 @@ const useStyles = makeStyles({
   }
 });
 
-function useTechList(){
-
-  const [Tech, setTech] = React.useState([]);
-
-  React.useEffect(() => {
-		fetch("random.json")
-			.then((response) => response.json())
-			.then((data) => {
-				setTech(data)
-			})
-  }, []);
-
-  return Tech;
-}
 
 function PioneerTabs() {
   const classes = useStyles();
@@ -84,9 +66,6 @@ function TechTabs() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
-  const tech = useTechList();
-  const tech1 = tech[0]  
   
   return (
     <Paper square className={classes.root}>
@@ -98,9 +77,9 @@ function TechTabs() {
         textColor="primary"
         aria-label="icon tabs example"
       >
-        <Tab icon={<img className={classes.img} style={{borderRadius: 56}} src={image1}/>} aria-label="phone" />
-        <Tab icon={<img className={classes.img} style={{borderRadius: 56}} src={image2} />} aria-label="favorite" />
-        <Tab icon={<img className={classes.img} style={{borderRadius: 56}} src={image3} />} aria-label="person" />
+        <Tab icon={<img className={classes.img} style={{borderRadius: 56}} src={"./Tech_Timelines/Timeline Graphic CSE 301.png"}/>} aria-label="phone" />
+        <Tab icon={<img className={classes.img} style={{borderRadius: 56}} src={"./Tech_Timelines/Timeline_Ai.jpg"} />} aria-label="favorite" />
+        <Tab icon={<img className={classes.img} style={{borderRadius: 56}} src={"./Tech_Timelines/timeline_gpu.jpg"} />} aria-label="person" />
       </Tabs>
     </Paper>
   );

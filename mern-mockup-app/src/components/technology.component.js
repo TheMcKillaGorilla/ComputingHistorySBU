@@ -2,8 +2,6 @@ import React, { Component, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
-import ButtonBase from '@material-ui/core/ButtonBase';
 import styled from 'styled-components';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
@@ -125,7 +123,7 @@ function TechnologyList(technologies) {
             <img className={classes.img} alt="complex" src={newTech["tech_img_2"]} />
           </Grid>
         </Grid>
-        <Button onClick={() => window.open( newTech["student_tech_url"] )} >View Full Report</Button>
+        <Button onClick={() => window.open( "./Tech_Student_HTML/" + newTech["student_tech_url"] )} >View Full Report</Button>
       </div>
     </Fade>
   );
@@ -137,7 +135,7 @@ function TechnologyList(technologies) {
           <div class="col s12 m6">
             <div class="card" style={{borderRadius: 56}}>
               <div class="card-image">
-                <img src={ technology.tech_timeline } />
+                <img src={ "./Tech_Timelines/" + technology.tech_timeline } />
                     <button class="btn-floating halfway-fab waves-effect waves-light red" onClick={handleOpen(technology)} ><i class="material-icons">add</i></button>
                     <Modal
                       aria-labelledby="transition-modal-title"
@@ -173,7 +171,7 @@ function Technology() {
   const [technologies, setTechnologies] = React.useState([]);
   
   React.useEffect(() => {
-        fetch("random.json")
+        fetch("Technology.json")
             .then((response) => response.json())
             .then((data) => {
                 setTechnologies(data)

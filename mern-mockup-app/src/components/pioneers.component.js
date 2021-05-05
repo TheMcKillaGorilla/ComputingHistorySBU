@@ -95,8 +95,11 @@ const useStyles = makeStyles((theme) => ({
   },
   pioneerofthedaypaper: {
     maxHeight: '100%',
+    maxWidth: '100%',
     background: 'linear-gradient(180deg, #D63C3C 20%, #000000 70%)',
-    borderRadius: 56
+    borderRadius: 56,
+    overflow: 'hidden',
+    overflowY: 'scroll',
   },
 }));
 
@@ -107,7 +110,7 @@ function usePioneersList(){
   const [pio, setPio] = React.useState([]);
 
   React.useEffect(() => {
-		fetch("sample_master.json")
+		fetch("Pioneer.json")
 			.then((response) => response.json())
 			.then((data) => {
 				setPio(data) 
@@ -204,12 +207,11 @@ function PioneerInfo(pioneers) {
   )
 }
 
-
 function PioneerOfTheDay() {
   const classes = useStyles();
   const pioneers = usePioneersList();
 
-  const randomKey = Math.floor(Math.random() * 3);
+  const randomKey = Math.floor(Math.random() * pioneers.length);
 
   const pioneer = pioneers[randomKey] ?? 0
 
@@ -227,17 +229,27 @@ function PioneerOfTheDay() {
         </Paper>
         <Grid item>
             <ButtonBase className={classes.pioneerofthedayimg}>
-              <img className={classes.img} alt="complex" src={pioneer["img_1"]} />
+              <img className={classes.img} alt="complex" src={pioneer["img_4"]} />
             </ButtonBase>
         </Grid>
         <Grid item>
             <ButtonBase className={classes.pioneerofthedayimg}>
-              <img className={classes.img} alt="complex" src={pioneer["img_2"]} />
+              <img className={classes.img} alt="complex" src={pioneer["img_5"]} />
             </ButtonBase>
         </Grid>
         <Grid item>
             <ButtonBase className={classes.pioneerofthedayimg}>
-              <img className={classes.img} alt="complex" src={pioneer["img_3"]} />
+              <img className={classes.img} alt="complex" src={pioneer["img_6"]} />
+            </ButtonBase>
+        </Grid>
+        <Grid item>
+            <ButtonBase className={classes.pioneerofthedayimg}>
+              <img className={classes.img} alt="complex" src={pioneer["img_7"]} />
+            </ButtonBase>
+        </Grid>
+        <Grid item>
+            <ButtonBase className={classes.pioneerofthedayimg}>
+              <img className={classes.img} alt="complex" src={pioneer["img_8"]} />
             </ButtonBase>
         </Grid>
       </Grid>
@@ -252,7 +264,7 @@ function Pioneers() {
   const [input, setInput] = useState('');
 
   React.useEffect(() => {
-		fetch("sample_master.json")
+		fetch("Pioneer.json")
 			.then((response) => response.json())
 			.then((data) => {
         setPioneers(data) 
