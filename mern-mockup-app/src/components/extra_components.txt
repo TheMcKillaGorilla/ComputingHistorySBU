@@ -40,3 +40,8 @@ debugging
 toDO:
 - create abstract for the project ~ 300 words https://www.stonybrook.edu/commcms/ureca/celebration/registration.php
 - create a pdf poster file 
+
+
+make instuction document - precisely explains what and how students will submit the content for the website
+make it look exactly like the figma
+each timeline would have it's own directory which would store all the images

@@ -9,7 +9,7 @@ export default class Navigationbar extends Component {
 
     return (
         <nav className="navbar navbar-expand-lg" style={{
-          background: 'linear-gradient(45deg, #000000 30%, #990000 90%)'
+          background: '#000000'
       }}>
           <Link to="/" className="navbar-brand">Stony Brook University</Link>
           <div className="collpase navbar-collapse">

@@ -77,9 +77,9 @@ function TechTabs() {
         textColor="primary"
         aria-label="icon tabs example"
       >
-        <Tab icon={<img className={classes.img} style={{borderRadius: 56}} src={"./Tech_Timelines/Timeline Graphic CSE 301.png"}/>} aria-label="phone" />
-        <Tab icon={<img className={classes.img} style={{borderRadius: 56}} src={"./Tech_Timelines/Timeline_Ai.jpg"} />} aria-label="favorite" />
-        <Tab icon={<img className={classes.img} style={{borderRadius: 56}} src={"./Tech_Timelines/timeline_gpu.jpg"} />} aria-label="person" />
+        <Tab icon={<img className={classes.img} style={{borderRadius: 56}} src={"./Tech_Timelines/Calculator/Timeline Graphic CSE 301.png"}/>} aria-label="phone" />
+        <Tab icon={<img className={classes.img} style={{borderRadius: 56}} src={"./Tech_Timelines/Artificial Intelligence/Timeline_Ai.jpg"} />} aria-label="favorite" />
+        <Tab icon={<img className={classes.img} style={{borderRadius: 56}} src={"./Tech_Timelines/Computer Graphics/timeline_gpu.jpg"} />} aria-label="person" />
       </Tabs>
     </Paper>
   );

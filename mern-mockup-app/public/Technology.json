@@ -31,5 +31,16 @@
         "tech_img_2": "https://history-computer.com/ModernComputer/Software/images/Ivan_Sutherland1962.jpg",
 
         "student_tech_url": "CSE_301_ComputerGraphics.htm"
+    },
+    {
+        "_id": 3,
+        "student_name": "Ahamed Arif",
+        "technology": "Piano",
+        "tech_timeline": "piano_timeline.jpeg",
+        "tech_basic_summery": "When thinking of computer graphics people will commonly imagine the high definition 3D models used in todays video games or even movies that look incredibly realistic its enough to trigger the uncanny valley phenomena. Computer graphics have come a long way in such a short amount of time and its really only been about 60 years since computer graphics were being actively improved and worked on. The first “graphics” started as punched cards. These were what were used to visually display information and it wasn’t even displayed on the computer screen. The computer would take the punch cards and read them, loading in the information. The way we see computer graphics now kicked off with the invention of an Oscilloscope. This is a machine that shows voltage data as waves. Ben Laposky was the one who created the connection between using an oscilloscope as computer graphics leading him to become one of the first computer artists. He saw the potential in having a visual representation of the data displayed on the screen. Ben Laposky himself said, “The relationship of the oscillons to computer art is that the basic waveforms are analogue curves, of the type used in analogue computer systems.” Laposky’s genius idea allowed him to set the stage for future computer graphic designers and started a chain reaction of the need to represent visual data on computers in an easy, readable way. The relationship of the oscillons to computer art is that the basic waveforms are analogue curves, of the type used in analogue computer systems.” Laposky’s genius idea allowed him to set the stage for future computer graphic designers and started a chain reaction of the need to represent visual data on computers in an easy, readable way.  represent visual data on computers in an easy, readable way.",
+        "tech_img_1": "https://www.musikalessons.com/blog/wp-content/uploads/2017/06/grand-piano-.jpg",
+        "tech_img_2": "https://cdnp0.stackassets.com/fdfe029162b1e81e1e9a8c07a34d4ae133b1dfdb/store/fed545fb028c56bde01ab09fe8f7c9ad9cd21cb534cd37f2daa36d86d8f5/product_36853_product_shot_wide.jpg",
+        "student_tech_url": "piano.html"
+
     }
 ]

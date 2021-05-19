@@ -2,91 +2,97 @@
   {
     "_id": 0,
     "student_name": "Christopher Weber",
-
+    "pioneer_bday": "09-19-1999",
     "pioneername": "Alan Turing",
     "description_one": "Born in Maida Vale, London, Turing was raised in southern England. He graduated at King's College, Cambridge with a degree in mathematics. Whilst he was a fellow at Cambridge, he published a proof demonstrating that some purely mathematical yes–no questions can never be answered by computation and defined a Turing machine, and went on to prove the halting problem for Turing machines is undecidable. In 1938, he obtained his PhD from the Department of Mathematics at Princeton University. During the Second World War, Turing worked for the Government Code and Cypher School (GC&CS) at Bletchley Park, Britain's codebreaking centre that produced Ultra intelligence. For a time he led Hut 8, the section that was responsible for German naval cryptanalysis.",
     "url": "https://www.youtube.com/embed/12BK4THxLIU",
     "img_1": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Alan_Turing_Aged_16.jpg",
-    "img_2": "https://spectrum.ieee.org/image/Mjk0MjQ5OQ.jpeg",
-    "img_3": "https://pbs.twimg.com/media/DgYtyvTWkAAFUhn.jpg",
+    "img_2": "https://pbs.twimg.com/media/DgYtyvTWkAAFUhn.jpg",
 
     "description_two": "Alan Mathison Turing OBE FRS was an English mathematician, computer scientist, logician, cryptanalyst, philosopher, and theoretical biologist.",
-    "img_4": "https://images.newscientist.com/wp-content/uploads/2019/07/15113536/ff87k9-copy1.jpg",
-    "img_5": "https://ichef.bbci.co.uk/images/ic/1280xn/p02ck8fl.jpg",
-    "img_6": "https://s.yimg.com/ny/api/res/1.2/RkvHavLaQT7h55aJN3jYpQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTg1OS45MTQ4OTM2MTcwMjEy/https://s.yimg.com/uu/api/res/1.2/qKwCPKnSB8v5xHJgxdLGcw--~B/aD04NDI7dz05NDA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/bbc_us_articles_995/5d2194796f509c8d19ca4f8060b1ace7",
-    "img_7": "https://thumbs-prod.si-cdn.com/nPps91_84AozSXEx4LIDvywX_3Y=/fit-in/1600x0/https://public-media.si-cdn.com/filer/ad/a2/ada2ce90-3976-4d2a-848b-af71d26c0c5a/alan_turing_note.png",
-    "img_8": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/03/02/17/alan-turingv1.jpg?width=1200&auto=webp&quality=75"
+    "img_3": "https://images.newscientist.com/wp-content/uploads/2019/07/15113536/ff87k9-copy1.jpg",
+    "img_4": "https://ichef.bbci.co.uk/images/ic/1280xn/p02ck8fl.jpg",
+    "img_5": "https://s.yimg.com/ny/api/res/1.2/RkvHavLaQT7h55aJN3jYpQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTg1OS45MTQ4OTM2MTcwMjEy/https://s.yimg.com/uu/api/res/1.2/qKwCPKnSB8v5xHJgxdLGcw--~B/aD04NDI7dz05NDA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/bbc_us_articles_995/5d2194796f509c8d19ca4f8060b1ace7",
+    "img_6": "https://thumbs-prod.si-cdn.com/nPps91_84AozSXEx4LIDvywX_3Y=/fit-in/1600x0/https://public-media.si-cdn.com/filer/ad/a2/ada2ce90-3976-4d2a-848b-af71d26c0c5a/alan_turing_note.png"
   },
   {
     "_id": 1,
     "student_name": "Jia Hao Wang",
-
+    "pioneer_bday": "04-19-1999",
     "pioneername": "Bill Gates",
     "description_one": "Gates was born and raised in Seattle, Washington. In 1975, he co-founded Microsoft with childhood friend Paul Allen in Albuquerque, New Mexico. It became the world's largest personal computer software company.[6][a] Gates led the company as chairman and CEO until stepping down as CEO in January 2000, succeeded by Steve Ballmer, but he remained chairman of the board of directors and became chief software architect.[9] During the late 1990s, he had been criticized for his business tactics, which have been considered anti-competitive. This opinion has been upheld by numerous court rulings.[10] In June 2008, Gates transitioned to a part-time role at Microsoft and full-time work at the Bill & Melinda Gates Foundation, the private charitable foundation he and his wife, Melinda Gates, established in 2000",
     "url": "https://www.youtube.com/embed/GWbla-pQnCI",
     "img_1": "https://pbs.twimg.com/profile_images/988775660163252226/XpgonN0X.jpg",
     "img_2": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Bill_Gates_2018.jpg",
-    "img_3": "https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTY2MzU3MzIyODc5MjE1Mjk1/billgates2012.jpg",
 
     "description_two": "William Henry Gates III is an American business magnate, software developer, investor, author, and philanthropist. He is the co-founder of Microsoft Corporation",
-    "img_4": "https://ichef.bbci.co.uk/news/976/cpsprodpb/13EC1/production/_118310618_gettyimages-800605038.jpg",
-    "img_5": "https://images.mktw.net/im-299936?width=620&size=1.5005861664712778",
-    "img_6": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr9p4JMNrXq79aDIbZWSftM5bIq9K9oUTV7w&usqp=CAU",
-    "img_7": "https://media.wired.com/photos/5f2c4e757055a2aa4e463797/191:100/w_2400,h_1256,c_limit/Science_BillGates_1174744356.jpg",
-    "img_8": "https://cdn.vox-cdn.com/thumbor/OMfL7lthaihAI_4Otz0XycuMXxM=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/22489393/958624382.jpg"
+    "img_3": "https://ichef.bbci.co.uk/news/976/cpsprodpb/13EC1/production/_118310618_gettyimages-800605038.jpg",
+    "img_4": "https://images.mktw.net/im-299936?width=620&size=1.5005861664712778",
+    "img_5": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr9p4JMNrXq79aDIbZWSftM5bIq9K9oUTV7w&usqp=CAU",
+    "img_6": "https://media.wired.com/photos/5f2c4e757055a2aa4e463797/191:100/w_2400,h_1256,c_limit/Science_BillGates_1174744356.jpg"
   }, 
   {
     "_id": 2,
     "student_name": "Christina Perretta",
-
+    "pioneer_bday": "02-19-1999",
     "pioneername": "Elizebeth Friedman",
     "description_one": "Born on August 26, 1892 in Indiana Attended University of Ohio briefly before she moved to Hillstock College to be closer to home and her sick father Graduated with a English liturature degree Met Mary Robert Friedman who introduced her to the world of cryptography. Worked on decrypting cyphers for 4 years together before she quit to work for the war department in washington DC Passion of language helped her decrypt cryptography in Chinese and Mandorin",
     "url": "https://www.youtube.com/embed/12BK4THxLIU",
     "img_1": "https://i.pinimg.com/originals/f0/ab/2e/f0ab2ece8fa15937f0d1cbd3c882203d.jpg",
     "img_2": "http://cdn.coverstand.com/24294/595236/article_assets/dad9fb03df9ab821703a9603d3cfef91fea34ec7.jpg",
-    "img_3": "https://i1.wp.com/www.brainpickings.org/wp-content/uploads/2018/09/elizebethfriedman1.jpg",
 
     "description_two": "Elizebeth Smith Friedman was an American expert cryptanalyst and author. She has been called 'America's first female cryptanalyst'.",
-    "img_4": "https://www.witf.io/wp-content/uploads/2021/01/GCM_F-009_010_WFF-ESF_RiverbankLabs_1917-1485x1920.jpeg",
-    "img_5": "https://upload.wikimedia.org/wikipedia/commons/9/90/William_and_Elizebeth_Friedman_1917.jpg",
-    "img_6": "https://themobmuseum.org/wp-content/uploads/2016/05/Friedman-ElizebethWeb-533x400.jpg",
-    "img_7": "https://i0.wp.com/www.brainpickings.org/wp-content/uploads/2018/09/friedmans1.jpg?resize=552%2C633&ssl=1",
-    "img_8": "https://i.pinimg.com/originals/11/36/04/113604e5b069ca1afdcec1599591a1e1.jpg"
+    "img_3": "https://www.witf.io/wp-content/uploads/2021/01/GCM_F-009_010_WFF-ESF_RiverbankLabs_1917-1485x1920.jpeg",
+    "img_4": "https://upload.wikimedia.org/wikipedia/commons/9/90/William_and_Elizebeth_Friedman_1917.jpg",
+    "img_5": "https://themobmuseum.org/wp-content/uploads/2016/05/Friedman-ElizebethWeb-533x400.jpg",
+    "img_6": "https://i0.wp.com/www.brainpickings.org/wp-content/uploads/2018/09/friedmans1.jpg?resize=552%2C633&ssl=1"
   },
   {
     "_id": 3,
     "student_name": "Joseph Skufca",
-
+    "pioneer_bday": "01-19-1999",
     "pioneername": "Len Kleinrock",
     "description_one": "Leonard Kleinrock (born June 13, 1934) is an American computer scientist. A professor at UCLA's Henry Samueli School of Engineering and Applied Science, he made several important contributions to the field of computer science, in particular to the theoretical foundations of data transmission in computer networking. He played an influential role in the development of the ARPANET, the precursor to the Internet, at UCLA",
     "url": "https://www.youtube.com/embed/Q4og1EmRs1s",
     "img_1": "https://tedxbeaconstreet.com/wp-content/uploads/2019/07/Leonard-Kleinrock-300x300.jpg",
     "img_2": "https://www.sigmobile.org/mobicom/1995/gif/kleinrock.gif",
-    "img_3": "https://media.eurekalert.org/multimedia_prod/pub/web/225139_web.jpg",
 
     "description_two": "Leonard Kleinrock is an American computer scientist. A professor at UCLA's Henry Samueli School of Engineering and Applied Science, he made several important contributions to the field of computer science, in particular to the theoretical foundations of data transmission in computer networking.",
-    "img_4": "https://www.lk.cs.ucla.edu/data/images/lkimp.jpg",
-    "img_5": "https://lh3.googleusercontent.com/proxy/VikJ_lGPv_yfvHfCrhiZZqg3KmAXrYWQ5BYX8ZiB-CqTNVtEVDUIvprxqOTkmNa0ZI0hcu3HnPEc_PooN_Dh5hfw3V3kuDwIDcyy2bUvM_yG",
-    "img_6": "http://www.cnn.com/2009/TECH/10/29/kleinrock.internet/story.kleinrock.1.courtesy.jpg",
-    "img_7": "https://ca-times.brightspotcdn.com/dims4/default/6097971/2147483647/strip/true/crop/400x600+0+0/resize/840x1260!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F65%2F36%2F600e0efaf39bb119570e7935ce4c%2Fla-fi-mh-internet-20131029-001",
-    "img_8": "https://wp.dailybruin.com/images/2017/12/web.ns_.netmeutralityrenewal.SZ_.jpg"
+    "img_3": "https://www.lk.cs.ucla.edu/data/images/lkimp.jpg",
+    "img_4": "https://wp.dailybruin.com/images/2017/12/web.ns_.netmeutralityrenewal.SZ_.jpg",
+    "img_5": "http://www.cnn.com/2009/TECH/10/29/kleinrock.internet/story.kleinrock.1.courtesy.jpg",
+    "img_6": "https://ca-times.brightspotcdn.com/dims4/default/6097971/2147483647/strip/true/crop/400x600+0+0/resize/840x1260!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F65%2F36%2F600e0efaf39bb119570e7935ce4c%2Fla-fi-mh-internet-20131029-001"
   },
   {
     "_id": 4,
     "student_name": "Daniel Tomasiak",
-
+    "pioneer_bday": "05-19-1999",
     "pioneername": "Steve Jobs",
     "description_one": "Steven Paul Jobs (February 24, 1955 – October 5, 2011) was an American business magnate, industrial designer, investor, and media proprietor. He was the chairman, chief executive officer (CEO), and co-founder of Apple Inc.; the chairman and majority shareholder of Pixar; a member of The Walt Disney Company's board of directors following its acquisition of Pixar; and the founder, chairman, and CEO of NeXT. Jobs is widely recognized as a pioneer of the personal computer revolution of the 1970s and 1980s, along with his early business partner and fellow Apple co-founder Steve Wozniak. Jobs was born in San Francisco, California, and put up for adoption. He was raised in the San Francisco Bay Area. He attended Reed College in 1972 before dropping out that same year, and traveled through India in 1974 seeking enlightenment and studying Zen Buddhism.",
     "url": "https://www.youtube.com/embed/F2blg_up-ZU",
     "img_1": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Steve_Jobs_Headshot_2010-CROP_%28cropped_2%29.jpg",
     "img_2": "https://images-na.ssl-images-amazon.com/images/I/81VStYnDGrL.jpg",
-    "img_3": "https://media.vanityfair.com/photos/5c9abc1b4761b6729c5fef24/1:1/w_1332,h_1332,c_limit/steve-jobs-apple-tv.jpg",
 
     "description_two": "Steven Paul Jobs was an American business magnate, industrial designer, investor, and media proprietor.",
-    "img_4": "https://cdn.britannica.com/s:300x169,c:crop/15/153115-050-9C83E2C3/Steve-Jobs-computer-Apple-II-1977.jpg",
-    "img_5": "https://miro.medium.com/max/759/1*YQNS4UzYLRO0CumGdIfU9g.jpeg",
-    "img_6": "https://ichef.bbci.co.uk/news/224/media/images/55865000/jpg/_55865928_stevejobs1.jpg",
-    "img_7": "https://content.fortune.com/wp-content/uploads/2008/03/stevejobs_brian_6800012_max.jpg",
-    "img_8": "https://miro.medium.com/max/6000/1*fRs-er5QG0z8FPMB4kKE5Q.jpeg"
+    "img_3": "https://cdn.britannica.com/s:300x169,c:crop/15/153115-050-9C83E2C3/Steve-Jobs-computer-Apple-II-1977.jpg",
+    "img_4": "https://miro.medium.com/max/759/1*YQNS4UzYLRO0CumGdIfU9g.jpeg",
+    "img_5": "https://ichef.bbci.co.uk/news/224/media/images/55865000/jpg/_55865928_stevejobs1.jpg",
+    "img_6": "https://content.fortune.com/wp-content/uploads/2008/03/stevejobs_brian_6800012_max.jpg"
+  },
+  {
+    "_id": 5,
+    "student_name": "ahamed arif",
+    "pioneer_bday": "03-18-1999",
+    "pioneername": "Ahamed Arif",
+    "description_one": "Welcome to the website. If you&apos;re here, you&apos;re likely looking to find random words. Random Word Generator is the perfect tool to help you do this. While this tool isn&apos;t a word creator, it is a word generator that will generate random words for a variety of activities or uses. Even better, it allows you to adjust the parameters of the random words to best fit your needs. The first option the tool allows you to adjust is the number of random words to be generated. You can choose as many or as few as you&apos;d like. You also have the option of choosing words that only begin with a certain letter, only end with a certain letter or only begin and end with certain letters. If you leave these blank, the randomize words that appear will be from the complete list. You also have the option of choosing the number of syllables of the words or the word length of the randomized words. There are also options to further refine by choosing &quot;less than&quot; or &quot;greater than&quot; options for both syllables and word length. Again, if you leave the space blank, the complete list of randomized words will be used. Finally, you can choose between standard text or cursive words. The cursive words will all be in cursive using Once you have input all of your specifications, all you have to do is to press the Generate Random Words button, and a list of random words will appear. Below are some of the common ways people use this tool. Games This tool can be useful for games like or MadLibs. Since the words are random, this helps to keep a game like Pictionary fair for all those playing. For a game like MadLibs, it can help kids improve their vocabulary by generating words they may not have ever considered to fill in the blank spaces. The tool has the potential to help with any word game that doesn&apos;t require a specific word.Creative Writing",
+    "url": "https://www.youtube.com/embed/vUwe8ks7iao",
+    "img_1": "https://iwashyoudry.com/wp-content/uploads/2018/06/Garlic-Parmesan-Rice-2-675x919.jpg",
+    "img_2": "https://image.shutterstock.com/image-vector/background-2d-game-application-vector-260nw-402356899.jpg",
+    "description_two": "Elizebeth Smith Friedman was an American expert cryptanalyst and author. She has been called 'America's first female cryptanalyst'. Elizebeth Smith Friedman was an American expert cryptanalyst and author. She has been called 'America's first female cryptanalyst'.",
+    "img_3": "https://kinsta.com/wp-content/uploads/2018/07/social-media-image-sizes-1-1024x512.png",
+    "img_4": "https://image.shutterstock.com/image-illustration/forest-game-background-2d-application-260nw-746199403.jpg",
+    "img_5": "https://image.shutterstock.com/image-vector/set-seamless-cartoon-landscapes-game-260nw-479689213.jpg",
+    "img_6": "https://st2.depositphotos.com/5479200/11515/v/950/depositphotos_115151514-stock-illustration-beautiful-winter-landscape-2d-game.jpg"
+
   }
 ]

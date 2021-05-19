@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
   },
   modalpaper: {
-    background: 'linear-gradient(45deg, #000000 30%, #990000 90%)',
+    background: 'linear-gradient(180deg, #DC4141 30%, #000000 90%)',
     width: 1200,
     height: 700,
     border: '2px solid #000',
@@ -87,7 +87,7 @@ const Button = styled.button`
   padding: 16px 32px;
   border-radius: 4px;
   border: none;
-  background: linear-gradient(45deg, #000000 30%, #990000 90%);
+  background: transparent;
   color: #fff;
   font-size: 24px;
   cursor: pointer;
@@ -119,11 +119,11 @@ function TechnologyList(technologies) {
             <p style={{color:'white'}} id="transition-modal-description">{newTech["tech_basic_summery"]}</p>
           </Paper>
           <Grid item>
-            <img className={classes.img} alt="complex" src={newTech["tech_img_1"]}/>
-            <img className={classes.img} alt="complex" src={newTech["tech_img_2"]} />
+            <img className={classes.img} alt="complex" src={"./Tech_Timelines/" + newTech["technology"] + "/" + newTech["tech_img_1"]}/>
+            <img className={classes.img} alt="complex" src={"./Tech_Timelines/" + newTech["technology"] + "/" + newTech["tech_img_2"]} />
           </Grid>
         </Grid>
-        <Button onClick={() => window.open( "./Tech_Student_HTML/" + newTech["student_tech_url"] )} >View Full Report</Button>
+        <Button onClick={() => window.open( "./Tech_Timelines/" + newTech["technology"] + "/" + newTech["student_tech_url"] )} >View Full Report</Button>
       </div>
     </Fade>
   );
@@ -135,7 +135,7 @@ function TechnologyList(technologies) {
           <div class="col s12 m6">
             <div class="card" style={{borderRadius: 56}}>
               <div class="card-image">
-                <img src={ "./Tech_Timelines/" + technology.tech_timeline } />
+                <img src={ "./Tech_Timelines/" + technology.technology + "/" + technology.tech_timeline } />
                     <button class="btn-floating halfway-fab waves-effect waves-light red" onClick={handleOpen(technology)} ><i class="material-icons">add</i></button>
                     <Modal
                       aria-labelledby="transition-modal-title"
@@ -163,7 +163,8 @@ function TechnologyList(technologies) {
     </div>
   )));
 }
-
+//techname should be gray like figma 
+//tech modal should have consistant color as to the card paper color
 function Technology() {
   const classes = useStyles();
   const [searchTech, setSearchTech] = useState([]);

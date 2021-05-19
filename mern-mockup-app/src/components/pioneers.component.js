@@ -22,7 +22,9 @@ const useStyles = makeStyles((theme) => ({
   pioneerCardPaper: {
     padding: theme.spacing(0),
     margin: 'auto',
-    background: 'transparent',
+    background: '#000000',
+    height: 150,
+    width: '100%'
   },
   backgroundPaper: {
     padding: theme.spacing(0),
@@ -37,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
     margin: 'auto',
     maxHeight: 500,
-    maxWidth: '32%',
+    maxWidth: '27%',
     background: 'linear-gradient(180deg, #D44949 20%, #000000 70%)',
     overflow: 'hidden',
     overflowY: 'scroll',
@@ -45,9 +47,9 @@ const useStyles = makeStyles((theme) => ({
   },
   pioneerfullinfo: {
     padding: theme.spacing(2),
-    margin: '5px',
+    margin: '15px',
     maxHeight: 500,
-    maxWidth: '65%',
+    maxWidth: '70%',
     overflow: 'hidden',
     overflowY: 'scroll',
     overflowX: 'scroll',
@@ -55,24 +57,26 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 56
   },
   pioneerinfobody: {
-    maxHeight: 500,
-    maxWidth: 350,
+    maxHeight: '100%',
+    maxWidth: "27%",
     margin: '10px',
     overflow: 'hidden',
     overflowY: 'scroll',
     backgroundColor: "transparent",
   },
   pioneerinfovideo: {
-    maxHeight: '100%',
-    maxWidth: '100%',
-    background: 'linear-gradient(45deg, #000000 20%, #990000 70%)'
+    // maxHeight: '400',
+    width: 670,
+    backgroundColor: 'transparent'
   },
   pioneerifoimages: {
-    width: 900,
+    maxWidth: '100%',
     height: 238,
+    backgroundColor: 'transparent'
   },
   image: {
     width: 200,
+    height: 120,
     maxHeight: '100%',
     margin: '5px',
   },
@@ -92,6 +96,7 @@ const useStyles = makeStyles((theme) => ({
   pioneerofthedayimg: {
     width: 200,
     height: 200,
+    margin: '10px'
   },
   pioneerofthedaypaper: {
     maxHeight: '100%',
@@ -137,7 +142,7 @@ function PioneersList(pioneers) {
         <Grid container spacing={2}>
           <Grid item>
             <ButtonBase className={classes.image}>
-              <iframe  className={classes.img} alt="complex" src={ pioneer.url } />
+              <img className={classes.img} src={"http://img.youtube.com/vi/" + pioneer.url.replace("https://www.youtube.com/embed/", "") + "/0.jpg" }/>
             </ButtonBase>
           </Grid>
           <Grid item xs={12} sm container>
@@ -148,9 +153,6 @@ function PioneersList(pioneers) {
                 </Typography>
                 <Typography style={{color: 'white'}} variant="body2" gutterBottom>
                   {pioneer.student_name}
-                </Typography>
-                <Typography style={{color: 'white'}} variant="body2" color="textSecondary">
-                  {pioneer._id}
                 </Typography>
                 <button style={{background: 'linear-gradient(215deg, #000000 30%, #990000 90%)', color: 'white'}} onClick={() => setID(pioneer["_id"])}>View</button>;
               </Grid>
@@ -172,7 +174,6 @@ function PioneerInfo(pioneers) {
   })
 
   let newpioneer = pioneers[id] ?? 0
-  console.log(newpioneer)
   
   
 
@@ -191,15 +192,14 @@ function PioneerInfo(pioneers) {
           </Paper>
           <Grid item>
             <Paper className={classes.pioneerinfovideo}>
-              <iframe style={{backgroundColor: 'black'}} width="500" height="300" alt="complex" src={newpioneer["url"]} />
+              <iframe style={{backgroundColor: 'black'}} width="100%" height="400" alt="complex" src={newpioneer["url"]} />
+              <Grid item>
+               <ButtonBase className={classes.pioneerifoimages}>
+                 <img className={classes.img} alt="complex" src={newpioneer["img_1"]} />
+                 <img className={classes.img} alt="complex" src={newpioneer["img_2"]} />
+               </ButtonBase>
+              </Grid>
             </Paper>
-          </Grid>
-          <Grid item>
-              <ButtonBase className={classes.pioneerifoimages}>
-                <img className={classes.img} alt="complex" src={newpioneer["img_1"]} />
-                <img className={classes.img} alt="complex" src={newpioneer["img_2"]} />
-                <img className={classes.img} alt="complex" src={newpioneer["img_3"]} />
-              </ButtonBase>
           </Grid>
         </Grid>
     </div>
@@ -207,13 +207,70 @@ function PioneerInfo(pioneers) {
   )
 }
 
+// function PioneerInfo(pioneers) {
+//   const classes = useStyles();
+//   const [id, setID] = useState(0);
+
+//   useEffect(() => {
+//     setID(pioneerID)
+//   })
+
+//   let newpioneer = pioneers[id] ?? 0
+  
+  
+
+//   return (
+    
+//     <div className="pioneer">
+//         <Typography gutterBottom variant="subtitle1">
+//           <h4 style={{color: 'white'}}> {newpioneer["pioneername"]} </h4>
+//           <br/>
+//         </Typography>
+//         <Grid container spacing={2}>        
+//           <Paper className={classes.pioneerinfobody}>
+//             <Typography style={{color:'white'}} variant="body2" gutterBottom>
+//               {newpioneer["description_one"]}
+//             </Typography>
+//           </Paper>
+//           <Grid item>
+//             <Paper className={classes.pioneerinfovideo}>
+//               <iframe style={{backgroundColor: 'black'}} width="500" height="300" alt="complex" src={newpioneer["url"]} />
+//             </Paper>
+//           </Grid>
+//           <Grid item>
+//               <ButtonBase className={classes.pioneerifoimages}>
+//                 <img className={classes.img} alt="complex" src={newpioneer["img_1"]} />
+//                 <img className={classes.img} alt="complex" src={newpioneer["img_2"]} />
+//                 <img className={classes.img} alt="complex" src={newpioneer["img_3"]} />
+//               </ButtonBase>
+//           </Grid>
+//         </Grid>
+//     </div>
+  
+//   )
+// }
+
 function PioneerOfTheDay() {
   const classes = useStyles();
   const pioneers = usePioneersList();
 
-  const randomKey = Math.floor(Math.random() * pioneers.length);
+  var randomKey = 0;
 
-  const pioneer = pioneers[randomKey] ?? 0
+  const today = new Date()
+  var month = today.getMonth() + 1
+  var day = today.getDate
+
+  for (var i = 0; i < pioneers.length; i++) {
+    var bday = pioneers[i].pioneer_bday.split("-");
+    if (month===parseInt(bday[0]) && day===parseInt(bday[1])) {
+      randomKey = pioneers[i]._id
+      break;
+    } else {
+      randomKey = Math.floor(Math.random() * pioneers.length);
+    }
+   }
+
+   const pioneer = pioneers[randomKey] ?? 0
 
   return (
     <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}} className={classes.root}>
@@ -229,6 +286,11 @@ function PioneerOfTheDay() {
         </Paper>
         <Grid item>
             <ButtonBase className={classes.pioneerofthedayimg}>
+              <img className={classes.img} alt="complex" src={pioneer["img_3"]} />
+            </ButtonBase>
+        </Grid>
+        <Grid item>
+            <ButtonBase className={classes.pioneerofthedayimg}>
               <img className={classes.img} alt="complex" src={pioneer["img_4"]} />
             </ButtonBase>
         </Grid>
@@ -240,16 +302,6 @@ function PioneerOfTheDay() {
         <Grid item>
             <ButtonBase className={classes.pioneerofthedayimg}>
               <img className={classes.img} alt="complex" src={pioneer["img_6"]} />
-            </ButtonBase>
-        </Grid>
-        <Grid item>
-            <ButtonBase className={classes.pioneerofthedayimg}>
-              <img className={classes.img} alt="complex" src={pioneer["img_7"]} />
-            </ButtonBase>
-        </Grid>
-        <Grid item>
-            <ButtonBase className={classes.pioneerofthedayimg}>
-              <img className={classes.img} alt="complex" src={pioneer["img_8"]} />
             </ButtonBase>
         </Grid>
       </Grid>
@@ -294,15 +346,14 @@ function Pioneers() {
         
           <Grid container spacing={3}>
              
-            {/* paper for the playlist of all the pioneers */}
+             {/* paper for the playlist of all the pioneers */}
             <Paper className={classes.videopaper}>
               <Grid item >{PioneersList(searchPioneers)}</Grid>
             </Paper>
-
-            {/* paper for the pioneer full information */}
+            
+             {/* paper for the pioneer full information */}
             <Paper  className={classes.pioneerfullinfo}>
               {PioneerInfo(pioneers)}
-              {/* {PioneersList().PioneerInfo()} */}
             </Paper>
 
             {/* paper for the pioneer of the day page */}
