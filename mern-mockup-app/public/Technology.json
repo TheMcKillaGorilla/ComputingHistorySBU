@@ -42,5 +42,15 @@
         "tech_img_2": "https://cdnp0.stackassets.com/fdfe029162b1e81e1e9a8c07a34d4ae133b1dfdb/store/fed545fb028c56bde01ab09fe8f7c9ad9cd21cb534cd37f2daa36d86d8f5/product_36853_product_shot_wide.jpg",
         "student_tech_url": "piano.html"
 
+    },
+    {
+        "_id": 4,
+        "student_name": "Kenny Cheng,",
+        "technology": "CPU",
+        "tech_timeline": "CPU Timeline.PNG",
+        "tech_basic_summery": "The CPU or the central processing unit is often known as the brain of the modern computer. It contains the circuits that execute the instructions a program and manages the rest of the computer parts in the system. While this part is possibly the most important part of our computer today, this piece of hardware has change drastically over time since it was initially created. While it is important to understand how we got to the modern CPUs that we use in all our computers today, we should also look at what lead to the creation of the CPU. Before the CPU or even the first computer, humanity relied on sheer willpower and tools to do calculations. While this worked for thousands of years, as problems became more complicated and more calculations needed to be done, humanity started to try to find ways to create machines that would help with the calculations. As these machines started to evolve, they eventually lead to the creation of the computer and with that, the CPU. One of the first machines that helped lead to the creation of the modern computer was the difference engine, a calculating machine designed in the 1820s [4], created by Charles Babbage. This machine was Babbage’s solution to help make calculations for the nautical tables easier and that interested the British government greatly. The government decided to fund the project and Babbage started to build the machine however, as Babbage worked on the machine, he thought of a better machine that would be a general-purpose version of the difference engine and called it the analytical engine. The analytical engine ended up taking all of Babbage’s attention which led to the difference engine never being completed. As a result, the British government stopped being completed. As a result, the British.",
+        "tech_img_1": "Altair 8800.jpg",
+        "tech_img_2": "Apple M1.jpg",
+        "student_tech_url": "Tech_History_Web_Page.html"
     }
 ]

@@ -45,3 +45,7 @@ toDO:
 make instuction document - precisely explains what and how students will submit the content for the website
 make it look exactly like the figma
 each timeline would have it's own directory which would store all the images
+
+
+pioneername for the list of pioneer smaller 
+pioneerinfo shouldnt scroll, make video smaller to show the pioneer pictures without scrolling

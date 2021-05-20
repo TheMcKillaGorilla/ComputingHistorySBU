@@ -4,12 +4,12 @@ Pioneer:
         - 100 - 150 word paragraph about the pioneer
         - one minute pioneer of the day video with no copyright music
         - 2 photos of the pioneer
-            - first image dimension: width = 675, height = 919
-            - second image dimension: width = 1024, height = 512
+            - first image dimension: width = 675, height = 919 (image should be in jpg or png format)
+            - second image dimension: width = 1024, height = 512 (image should be in jpg or png format)
 
     Pioneer of the Day:
         - 36 word short description of the pioneer to be used in the pioneer of the day paragraph
-        - 4 different images seperate from the 2 used in the pioneer info for the pioneer of the day images
+        - 4 different images seperate from the 2 used in the pioneer info for the pioneer of the day images (image should be in jpg or png format)
 
     pioneer json information
         - "_id": id of the pioneer objects(used to refrence pioneers in the code)
@@ -20,32 +20,35 @@ Pioneer:
         - "url": embeded url of the youtube pioneer one minute video
         - "img_1": image one for the pioneer info section 
         - "img_2": image two for the pioneer info section
-        - "description_two": description_two(the pioneer of the day description 36 words paragraph)
+        - "description_two": description_two(the pioneer of the day description, 36 words paragraph)
         - "img_3": image three for the pioneer of the day section
         - "img_4": image four for the pioneer of the day section
         - "img_5": image five for the pioneer of the day section
         - "img_6": image six for the pioneer of the day section
 
     pioneer json ex:
-        "_id": 5,
-        "student_name": "ahamed arif",
-        "pioneer_bday": "03-18-1999",
-        "pioneername": "Ahamed Arif",
-        "description_one": "Welcome to the website. If you&apos;re here, you&apos;re likely looking to find random words. Random Word Generator is the perfect tool to help you do this. While this tool isn&apos;t a word creator, it is a word generator that will generate random words for a variety of activities or uses. Even better, it allows you to adjust the parameters of the random words to best fit your needs. The first option the tool allows you to adjust is the number of random words to be generated. You can choose as many or as few as you&apos;d like. You also have the option of choosing words that only begin with a certain letter, only end with a certain letter or only begin and end with certain letters. If you leave these blank, the randomize words that appear will be from the complete list. You also have the option of choosing the number of syllables of the words or the word length of the randomized words. There are also options to further refine by choosing &quot;less than&quot; or &quot;greater than&quot; options for both syllables and word length. Again, if you leave the space blank, the complete list of randomized words will be used. Finally, you can choose between standard text or cursive words. The cursive words will all be in cursive using Once you have input all of your specifications, all you have to do is to press the Generate Random Words button, and a list of random words will appear. Below are some of the common ways people use this tool. Games This tool can be useful for games like or MadLibs. Since the words are random, this helps to keep a game like Pictionary fair for all those playing. For a game like MadLibs, it can help kids improve their vocabulary by generating words they may not have ever considered to fill in the blank spaces. The tool has the potential to help with any word game that doesn&apos;t require a specific word.Creative Writing",
-        "url": "https://www.youtube.com/embed/vUwe8ks7iao",
+        "_id": 6,
+        "student_name": "anything",
+        "pioneer_bday": "04-15-1989",
+        "pioneername": "anything anything",
+        "description_one": "'Buddha Purnima' is also known as 'Buddha Jayanti'. Buddha Purnima is celebrated to commemorate the birth, enlightenment and death (Nirvan) of Gautam Buddha, the three important events in the life of Buddha. It is celebrated on the full moon night in Vaisakha month according to the Hindu calendar that usually falls in April or May. This festival is celebrated throughout South-East Asia. This festival is celebrated by the Buddhists. It is the most holy time in the Buddhist calendar. Buddha Purnima is also known as Vaisakha Puja in India. In Buddha Purnima devotees make donations to the temple. On this day the Buddhists bathe and wear only white clothes. Incense, flowers, candles and fruits are offered to the statue of the Buddha.",
+        "url": "https://www.youtube.com/embed/YayIwtHEymA",
         "img_1": "https://iwashyoudry.com/wp-content/uploads/2018/06/Garlic-Parmesan-Rice-2-675x919.jpg",
-        "img_2": "https://image.shutterstock.com/image-vector/background-2d-game-application-vector-260nw-402356899.jpg",
-        "description_two": "Elizebeth Smith Friedman was an American expert cryptanalyst and author. She has been called 'America's first female cryptanalyst'. Elizebeth Smith Friedman was an American expert cryptanalyst and author. She has been called 'America's first female cryptanalyst'.",
-        "img_3": "https://kinsta.com/wp-content/uploads/2018/07/social-media-image-sizes-1-1024x512.png",
-        "img_4": "https://image.shutterstock.com/image-illustration/forest-game-background-2d-application-260nw-746199403.jpg",
-        "img_5": "https://image.shutterstock.com/image-vector/set-seamless-cartoon-landscapes-game-260nw-479689213.jpg",
-        "img_6": "https://st2.depositphotos.com/5479200/11515/v/950/depositphotos_115151514-stock-illustration-beautiful-winter-landscape-2d-game.jpg"
+        "img_2": "https://www.rakacreative.com/wp-content/uploads/2017/01/Raka-TW-social-media-sizes-1024x512.png",
+        "description_two": "'Buddha Purnima' is also known as 'Buddha Jayanti'. Buddha Purnima is celebrated to commemorate the birth, enlightenment and death (Nirvan) of Gautam Buddha, the three important events in the life of Buddha. It is celebrated on",
+        "img_3": "https://image.shutterstock.com/image-photo/mountains-under-mist-morning-amazing-260nw-1725825019.jpg",
+        "img_4": "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg",
+        "img_5": "https://st.depositphotos.com/1428083/2946/i/600/depositphotos_29460297-stock-photo-bird-cage.jpg",
+        "img_6": "https://www.readree.com/wp-content/uploads/2021/01/Search-Engines-That-Search-for-Duplicate-images.jpg"
 
 Tech Timelines
-    - has to be a horizontal timeline 
-    - 2 pictures for the short description of the timeline
-    - 300 word paragraph description of the timeline for the reader to preview before being taken to the student html page
+    - Each time a new technology is added, there must be a new folder with the same name as the technology, for that technology in the directory public/Tech_Timelines
+    - all the images should be uploaded to the technolgy folder for the html page to show it
 
+    - has to be a horizontal timeline (timeline images should be download so we could put into the timeline forlder in src)
+    - 300 word paragraph description of the timeline for the reader to preview before being taken to the student html page 
+    - 2 pictures for the short description of the timeline (images should be download so we could put into the timeline forlder in src)
+    
 
     tech json information
         "_id": id of the technology objects(used to refrence technology in the code)
@@ -54,15 +57,15 @@ Tech Timelines
         "tech_timeline": timline image of the technology
         "tech_basic_summery": 300 word summary of the technology for the technology preview page
         "tech_img_1": image one for the technology preview page
-        "tech_img_2": image one for the technology preview page
+        "tech_img_2": image two for the technology preview page
         "student_tech_url": url for the html page that the student made for the technology
 
     tech json ex:
-        "_id": 3,
-        "student_name": "Ahamed Arif",
-        "technology": "Piano",
-        "tech_timeline": "piano_timeline.jpeg",
-        "tech_basic_summery": "When thinking of computer graphics people will commonly imagine the high definition 3D models used in todays video games or even movies that look incredibly realistic its enough to trigger the uncanny valley phenomena. Computer graphics have come a long way in such a short amount of time and its really only been about 60 years since computer graphics were being actively improved and worked on. The first “graphics” started as punched cards. These were what were used to visually display information and it wasn’t even displayed on the computer screen. The computer would take the punch cards and read them, loading in the information. The way we see computer graphics now kicked off with the invention of an Oscilloscope. This is a machine that shows voltage data as waves. Ben Laposky was the one who created the connection between using an oscilloscope as computer graphics leading him to become one of the first computer artists. He saw the potential in having a visual representation of the data displayed on the screen. Ben Laposky himself said, “The relationship of the oscillons to computer art is that the basic waveforms are analogue curves, of the type used in analogue computer systems.” Laposky’s genius idea allowed him to set the stage for future computer graphic designers and started a chain reaction of the need to represent visual data on computers in an easy, readable way. The relationship of the oscillons to computer art is that the basic waveforms are analogue curves, of the type used in analogue computer systems.” Laposky’s genius idea allowed him to set the stage for future computer graphic designers and started a chain reaction of the need to represent visual data on computers in an easy, readable way.  represent visual data on computers in an easy, readable way.",
-        "tech_img_1": "https://www.musikalessons.com/blog/wp-content/uploads/2017/06/grand-piano-.jpg",
-        "tech_img_2": "https://cdnp0.stackassets.com/fdfe029162b1e81e1e9a8c07a34d4ae133b1dfdb/store/fed545fb028c56bde01ab09fe8f7c9ad9cd21cb534cd37f2daa36d86d8f5/product_36853_product_shot_wide.jpg",
-        "student_tech_url": "piano.html"
+        "_id": 4,
+        "student_name": "Kenny Cheng,
+        "technology": "CPU,
+        "tech_timeline": "CPU Timeline.PNG",
+        "tech_basic_summery": "The CPU or the central processing unit is often known as the brain of the modern computer. It contains the circuits that execute the instructions a program and manages the rest of the computer parts in the system. While this part is possibly the most important part of our computer today, this piece of hardware has change drastically over time since it was initially created. While it is important to understand how we got to the modern CPUs that we use in all our computers today, we should also look at what lead to the creation of the CPU. Before the CPU or even the first computer, humanity relied on sheer willpower and tools to do calculations. While this worked for thousands of years, as problems became more complicated and more calculations needed to be done, humanity started to try to find ways to create machines that would help with the calculations. As these machines started to evolve, they eventually lead to the creation of the computer and with that, the CPU. One of the first machines that helped lead to the creation of the modern computer was the difference engine, a calculating machine designed in the 1820s [4], created by Charles Babbage. This machine was Babbage’s solution to help make calculations for the nautical tables easier and that interested the British government greatly. The government decided to fund the project and Babbage started to build the machine however, as Babbage worked on the machine, he thought of a better machine that would be a general-purpose version of the difference engine and called it the analytical engine. The analytical engine ended up taking all of Babbage’s attention which led to the difference engine never being completed. As a result, the British government stopped being completed. As a result, the British.",
+        "tech_img_1": "Altair 8800.jpg",
+        "tech_img_2": "Apple M1.jpg",
+        "student_tech_url": "Tech_History_Web_Page.html"
