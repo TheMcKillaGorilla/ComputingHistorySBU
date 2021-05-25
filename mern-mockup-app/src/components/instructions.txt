@@ -4,7 +4,7 @@ Pioneer:
         - 100 - 150 word paragraph about the pioneer
         - one minute pioneer of the day video with no copyright music
         - 2 photos of the pioneer
-            - first image dimension: width = 675, height = 919 (image should be in jpg or png format)
+            - first image dimension: width = 1024, height = 512 (image should be in jpg or png format)
             - second image dimension: width = 1024, height = 512 (image should be in jpg or png format)
 
     Pioneer of the Day:

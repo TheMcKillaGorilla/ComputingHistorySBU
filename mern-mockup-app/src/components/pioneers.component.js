@@ -6,7 +6,8 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import SearchBar from './SearchBar';
-import "../pioneer.css"
+import { Textfit } from 'react-textfit';
+import "../pioneer.css";
 
 import { useState, useEffect } from 'react';
 
@@ -23,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(0),
     margin: 'auto',
     background: '#000000',
-    height: 150,
+    height: 100,
     width: '100%'
   },
   backgroundPaper: {
@@ -39,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
     margin: 'auto',
     maxHeight: 500,
-    maxWidth: '27%',
+    width: 400,
     background: 'linear-gradient(180deg, #D44949 20%, #000000 70%)',
     overflow: 'hidden',
     overflowY: 'scroll',
@@ -58,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
   },
   pioneerinfobody: {
     maxHeight: '100%',
-    maxWidth: "27%",
+    maxWidth: "35%",
     margin: '10px',
     overflow: 'hidden',
     overflowY: 'scroll',
@@ -66,22 +67,22 @@ const useStyles = makeStyles((theme) => ({
   },
   pioneerinfovideo: {
     // maxHeight: '400',
-    width: 670,
+    width: 470,
     backgroundColor: 'transparent'
   },
   pioneerifoimages: {
     maxWidth: '100%',
-    height: 238,
-    backgroundColor: 'transparent'
+    height: 108,
+    backgroundColor: 'transparent',
   },
   image: {
-    width: 200,
-    height: 120,
+    width: 150,
+    height: 70,
     maxHeight: '100%',
     margin: '5px',
   },
   img: {
-    margin: 'auto',
+    margin: '10px',
     display: 'block',
     maxWidth: '100%',
     maxHeight: '100%',
@@ -148,11 +149,15 @@ function PioneersList(pioneers) {
           <Grid item xs={12} sm container>
             <Grid item xs container direction="column" spacing={2}>
               <Grid item xs>
-                <Typography gutterBottom variant="subtitle1">
-                  <h5 style={{fontSize: '16', color: 'white'}}>{pioneer.pioneername}</h5>
+              <Typography style={{color: 'white', fontWeight: 'bold'}} variant="body1" gutterBottom>
+                  <Textfit mode="single" forceSingleModeWidth={false}>
+                    {pioneer.pioneername + " "}
+                  </Textfit>
                 </Typography>
                 <Typography style={{color: 'white'}} variant="body2" gutterBottom>
-                  {pioneer.student_name}
+                  <Textfit mode="single" forceSingleModeWidth={false}>
+                    {pioneer.student_name + " "}
+                  </Textfit>
                 </Typography>
                 <button style={{background: 'linear-gradient(215deg, #000000 30%, #990000 90%)', color: 'white'}} onClick={() => setID(pioneer["_id"])}>View</button>;
               </Grid>
@@ -192,7 +197,7 @@ function PioneerInfo(pioneers) {
           </Paper>
           <Grid item>
             <Paper className={classes.pioneerinfovideo}>
-              <iframe style={{backgroundColor: 'black'}} width="100%" height="400" alt="complex" src={newpioneer["url"]} />
+              <iframe style={{backgroundColor: 'black'}} width="100%" height="250" alt="complex" src={newpioneer["url"]} />
               <Grid item>
                <ButtonBase className={classes.pioneerifoimages}>
                  <img className={classes.img} alt="complex" src={newpioneer["img_1"]} />
@@ -206,49 +211,6 @@ function PioneerInfo(pioneers) {
   
   )
 }
-
-// function PioneerInfo(pioneers) {
-//   const classes = useStyles();
-//   const [id, setID] = useState(0);
-
-//   useEffect(() => {
-//     setID(pioneerID)
-//   })
-
-//   let newpioneer = pioneers[id] ?? 0
-  
-  
-
-//   return (
-    
-//     <div className="pioneer">
-//         <Typography gutterBottom variant="subtitle1">
-//           <h4 style={{color: 'white'}}> {newpioneer["pioneername"]} </h4>
-//           <br/>
-//         </Typography>
-//         <Grid container spacing={2}>        
-//           <Paper className={classes.pioneerinfobody}>
-//             <Typography style={{color:'white'}} variant="body2" gutterBottom>
-//               {newpioneer["description_one"]}
-//             </Typography>
-//           </Paper>
-//           <Grid item>
-//             <Paper className={classes.pioneerinfovideo}>
-//               <iframe style={{backgroundColor: 'black'}} width="500" height="300" alt="complex" src={newpioneer["url"]} />
-//             </Paper>
-//           </Grid>
-//           <Grid item>
-//               <ButtonBase className={classes.pioneerifoimages}>
-//                 <img className={classes.img} alt="complex" src={newpioneer["img_1"]} />
-//                 <img className={classes.img} alt="complex" src={newpioneer["img_2"]} />
-//                 <img className={classes.img} alt="complex" src={newpioneer["img_3"]} />
-//               </ButtonBase>
-//           </Grid>
-//         </Grid>
-//     </div>
-  
-//   )
-// }
 
 function PioneerOfTheDay() {
   const classes = useStyles();
